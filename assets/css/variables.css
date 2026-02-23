@@ -1,0 +1,61 @@
+/* =====================================================
+   JOVI ENTERPRISE — Design System Variables
+   ===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* === PALETTE === */
+  --bg:         #f7f3eb;
+  --bg-2:       #ede8da;
+  --bg-3:       #e4deca;
+  --surface:    #fff;
+  --surface-2:  #faf8f2;
+
+  --border:     rgba(0,0,0,0.07);
+  --border-2:   rgba(0,0,0,0.13);
+
+  /* Golden Berry — Warm Amber */
+  --golden:     #d4860a;
+  --golden-2:   #f0a830;
+  --golden-3:   #7a4d00;
+  --golden-bg:  #fff4e0;
+  --golden-light: rgba(212,134,10,0.12);
+
+  /* Grape — Deep Violet */
+  --grape:      #6b2580;
+  --grape-2:    #a044b8;
+  --grape-3:    #3e1050;
+  --grape-bg:   #f5eafa;
+  --grape-light: rgba(107,37,128,0.12);
+
+  /* Combo — Andean Green */
+  --combo:      #2a7035;
+  --combo-2:    #45a050;
+  --combo-3:    #174020;
+  --combo-bg:   #e8f5ea;
+  --combo-light: rgba(42,112,53,0.12);
+
+  /* Text */
+  --text:   #1a1710;
+  --text-2: #4e4a3c;
+  --text-3: #8a8474;
+  --white:  #ffffff;
+
+  /* Typography */
+  --font-d: 'Cormorant Garamond', Georgia, serif;
+  --font-b: 'DM Sans', -apple-system, sans-serif;
+
+  /* Radius */
+  --r:   10px;
+  --rl:  18px;
+  --rxl: 28px;
+
+  /* Shadows */
+  --sh:  0 2px 20px rgba(0,0,0,0.08);
+  --shm: 0 6px 36px rgba(0,0,0,0.12);
+  --shl: 0 12px 56px rgba(0,0,0,0.16);
+
+  /* Transition */
+  --t: 0.28s cubic-bezier(0.4,0,0.2,1);
+  --t-slow: 0.6s cubic-bezier(0.4,0,0.2,1);
+}

@@ -1,0 +1,184 @@
+/* =====================================================
+   JOVI ENTERPRISE — productos.css
+   ===================================================== */
+
+/* ── DETAIL LAYOUT ── */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: clamp(28px, 5vw, 64px);
+  align-items: start;
+}
+.detail-grid--reverse {
+  grid-template-columns: 1.5fr 1fr;
+}
+.detail-img-card {
+  border-radius: var(--rxl);
+  overflow: hidden;
+  box-shadow: var(--shl);
+  margin-bottom: 12px;
+}
+.detail-img-card img {
+  width: 100%;
+  height: clamp(240px, 32vw, 400px);
+  object-fit: cover;
+  display: block;
+  transition: transform var(--t-slow) ease;
+}
+.detail-img-card:hover img { transform: scale(1.04); }
+
+.detail-img-secondary {
+  border-radius: var(--rl);
+  overflow: hidden;
+  box-shadow: var(--sh);
+  margin-bottom: 14px;
+}
+.detail-img-secondary img {
+  width: 100%;
+  height: clamp(110px, 16vw, 180px);
+  object-fit: cover;
+  display: block;
+}
+
+/* Detail badge box */
+.detail-badge-box {
+  border-radius: var(--rl);
+  padding: clamp(18px, 2.5vw, 26px);
+  margin-top: 14px;
+}
+
+/* Detail stats */
+.detail-stat-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.detail-stat {
+  flex: 1;
+  min-width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 8px;
+  border-radius: var(--r);
+  text-align: center;
+}
+.detail-stat__val {
+  font-family: var(--font-d);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  line-height: 1;
+}
+.detail-stat__label {
+  font-size: 0.64rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+}
+
+/* Detail facts list */
+.detail-fact {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+.detail-fact:last-child { border-bottom: none; }
+.detail-fact__icon {
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.detail-fact__title {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  margin-bottom: 3px;
+}
+.detail-fact__desc {
+  font-size: clamp(0.8rem, 1.5vw, 0.875rem);
+  color: var(--text-2);
+  line-height: 1.65;
+  display: block;
+}
+
+/* Section divider */
+.section-divider {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(212,134,10,0.22), transparent);
+  margin: 0;
+}
+.section-divider--grape {
+  background: linear-gradient(90deg, transparent, rgba(107,37,128,0.22), transparent);
+}
+.section-divider--combo {
+  background: linear-gradient(90deg, transparent, rgba(42,112,53,0.22), transparent);
+}
+
+/* Combo split image */
+.combo-split-img {
+  border-radius: var(--rxl);
+  overflow: hidden;
+  box-shadow: var(--shl);
+  margin-bottom: 14px;
+  position: relative;
+}
+.combo-split-img__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: clamp(200px, 28vw, 340px);
+}
+.combo-split-img__grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.combo-split-img__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 38%, rgba(42,112,53,0.28) 50%, transparent 62%);
+}
+.combo-split-img__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--combo-3);
+  white-space: nowrap;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .detail-grid,
+  .detail-grid--reverse {
+    grid-template-columns: 1fr;
+  }
+  .detail-grid--reverse > *:first-child {
+    order: 2;
+  }
+  .detail-grid--reverse > *:last-child {
+    order: 1;
+  }
+  .detail-img-card img {
+    height: clamp(220px, 55vw, 340px);
+  }
+}
+
+@media (max-width: 540px) {
+  .detail-stat-row { gap: 6px; }
+  .detail-stat { padding: 8px 6px; }
+}

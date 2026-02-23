@@ -1,0 +1,161 @@
+/* =====================================================
+   JOVI ENTERPRISE — nosotros.css
+   ===================================================== */
+
+/* ── ABOUT INTRO GRID ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: center;
+}
+
+/* Image mosaic */
+.about-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.about-imgs__main {
+  border-radius: var(--rl);
+  overflow: hidden;
+  box-shadow: var(--shl);
+  grid-row: span 2;
+}
+.about-imgs__main img {
+  width: 100%;
+  height: clamp(280px, 38vw, 480px);
+  object-fit: cover;
+  display: block;
+}
+.about-imgs__small {
+  border-radius: var(--rl);
+  overflow: hidden;
+  box-shadow: var(--sh);
+}
+.about-imgs__small img {
+  width: 100%;
+  height: clamp(120px, 17vw, 230px);
+  object-fit: cover;
+  display: block;
+}
+
+/* Stats row */
+.about-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.about-stat {
+  flex: 1;
+  min-width: 80px;
+  border-radius: var(--r);
+  padding: 14px 18px;
+  text-align: center;
+  border: 1px solid;
+}
+.about-stat__val {
+  font-family: var(--font-d);
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+.about-stat__label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+}
+.about-stat--golden {
+  background: var(--golden-bg);
+  border-color: rgba(212,134,10,0.2);
+}
+.about-stat--golden .about-stat__val { color: var(--golden-3); }
+.about-stat--grape {
+  background: var(--grape-bg);
+  border-color: rgba(107,37,128,0.2);
+}
+.about-stat--grape .about-stat__val { color: var(--grape-3); }
+.about-stat--combo {
+  background: var(--combo-bg);
+  border-color: rgba(42,112,53,0.2);
+}
+.about-stat--combo .about-stat__val { color: var(--combo-3); }
+
+/* About text */
+.about-text h2 {
+  font-family: var(--font-d);
+  font-size: clamp(1.7rem, 3.5vw, 2.8rem);
+  color: var(--text);
+  margin: 14px 0 18px;
+  font-weight: 600;
+}
+.about-text p {
+  font-size: clamp(0.86rem, 1.6vw, 0.96rem);
+  color: var(--text-2);
+  line-height: 1.82;
+  margin-bottom: 14px;
+}
+
+/* ── PANORAMIC QUOTE ── */
+.panoramic-quote {
+  height: clamp(180px, 28vw, 380px);
+  overflow: hidden;
+  position: relative;
+}
+.panoramic-quote__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+}
+.panoramic-quote__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(15,12,5,0.35),
+    rgba(15,12,5,0.2) 50%,
+    rgba(15,12,5,0.35));
+}
+.panoramic-quote__text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.panoramic-quote__text blockquote {
+  font-family: var(--font-d);
+  font-size: clamp(1.1rem, 2.5vw, 2rem);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--white);
+  text-align: center;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.6);
+  max-width: 700px;
+  padding: 0 24px;
+  line-height: 1.4;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-imgs {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .about-imgs__main img {
+    height: clamp(240px, 60vw, 360px);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-stats { gap: 8px; }
+  .about-stat { min-width: 0; padding: 10px 12px; }
+  .about-stat__val { font-size: 1.25rem; }
+}
