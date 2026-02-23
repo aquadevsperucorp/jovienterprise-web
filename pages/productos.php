@@ -41,7 +41,7 @@ include '../includes/header.php';
         <div class="detail-stat-row">
           <div class="detail-stat" style="background:var(--golden-light)"><span class="detail-stat__val" style="color:var(--golden-3)">500mg</span><span class="detail-stat__label">Por cápsula</span></div>
           <div class="detail-stat" style="background:var(--golden-light)"><span class="detail-stat__val" style="color:var(--golden-3)">60</span><span class="detail-stat__label">Cápsulas</span></div>
-          <div class="detail-stat" style="background:var(--golden-light)"><span class="detail-stat__val" style="color:var(--golden-3)">99%</span><span class="detail-stat__label">Extracto</span></div>
+          <div class="detail-stat" style="background:var(--golden-light)"><span class="detail-stat__val" style="color:var(--golden-3)">100%</span><span class="detail-stat__label">Extracto</span></div>
         </div>
       </div>
     </div>
@@ -58,15 +58,15 @@ include '../includes/header.php';
 
       <?php
       $facts_golden = [
-        ['🌱', 'Contenido por cápsula',   'Extracto de semilla de aguaymanto (Aguaymanto peruano) 99% — 500 mg'],
+        ['🌱', 'Contenido por cápsula',   'Extracto de semilla de aguaymanto (Aguaymanto peruano) 100% — 500 mg'],
         ['🧪', 'Ingredientes no medicinales', 'Estearato de magnesio vegetal en cápsula vegetal sin OGM compuesta de goma de carbohidrato vegetal y agua purificada.'],
         ['🚫', 'No contiene',             'Conservantes, saborizantes o colorantes artificiales, azúcar, lácteos, trigo, maíz, almidón, soja ni levadura.'],
         ['💊', 'Uso sugerido',            'Adultos: 1 cápsula al día o según indicaciones médicas. Mínimo 1 mes para ver beneficios. Consulte médico para uso más allá de 3 meses.'],
         ['⚠️', 'Precauciones',           'Consulte a un médico antes de usar si está embarazada, amamantando o tomando medicamentos recetados.'],
       ];
-      foreach ($facts_golden as [$ico, $tit, $desc]) : ?>
+      foreach ($facts_golden as $i => [$ico, $tit, $desc]) : ?>
       <div class="detail-fact">
-        <div class="detail-fact__icon" style="background:var(--golden-light)"><?= $ico ?></div>
+        <div class="detail-fact__icon <?= $i === 3 ? 'cert-item__icon--capsule' : '' ?>" style="background:var(--golden-light)"><?= $ico ?></div>
         <div>
           <span class="detail-fact__title"><?= $tit ?></span>
           <span class="detail-fact__desc"><?= $desc ?></span>
@@ -99,15 +99,15 @@ include '../includes/header.php';
 
       <?php
       $facts_grape = [
-        ['🍇', 'Contenido por cápsula',   'Extracto de semilla de uva (Uva peruana) 99% proantocianidinas — 500 mg'],
+        ['🍇', 'Contenido por cápsula',   'Extracto de semilla de uva (Uva peruana) 100% proantocianidinas — 500 mg'],
         ['🧪', 'Ingredientes no medicinales', 'Estearato de magnesio vegetal en cápsula vegetal sin OGM compuesta de goma de carbohidrato vegetal y agua purificada.'],
         ['🚫', 'No contiene',             'Conservantes, saborizantes o colorantes artificiales, azúcar, lácteos, trigo, maíz, almidón, soja ni levadura.'],
         ['💊', 'Uso sugerido',            'Adultos: 1 cápsula al día o según indicaciones médicas. Mínimo 1 mes para ver beneficios. Consulte médico para uso más allá de 3 meses.'],
         ['⚠️', 'Precauciones',           'Consulte a un médico antes de usar si está embarazada, amamantando o tomando medicamentos recetados.'],
       ];
-      foreach ($facts_grape as [$ico, $tit, $desc]) : ?>
+      foreach ($facts_grape as $i => [$ico, $tit, $desc]) : ?>
       <div class="detail-fact">
-        <div class="detail-fact__icon" style="background:var(--grape-light)"><?= $ico ?></div>
+        <div class="detail-fact__icon <?= $i === 3 ? 'cert-item__icon--capsule' : '' ?>" style="background:var(--grape-light)"><?= $ico ?></div>
         <div>
           <span class="detail-fact__title"><?= $tit ?></span>
           <span class="detail-fact__desc"><?= $desc ?></span>
@@ -135,7 +135,7 @@ include '../includes/header.php';
         <div class="detail-stat-row">
           <div class="detail-stat" style="background:var(--grape-light)"><span class="detail-stat__val" style="color:var(--grape-3)">500mg</span><span class="detail-stat__label">Por cápsula</span></div>
           <div class="detail-stat" style="background:var(--grape-light)"><span class="detail-stat__val" style="color:var(--grape-3)">60</span><span class="detail-stat__label">Cápsulas</span></div>
-          <div class="detail-stat" style="background:var(--grape-light)"><span class="detail-stat__val" style="color:var(--grape-3)">99%</span><span class="detail-stat__label">Extracto</span></div>
+          <div class="detail-stat" style="background:var(--grape-light)"><span class="detail-stat__val" style="color:var(--grape-3)">100%</span><span class="detail-stat__label">Extracto</span></div>
         </div>
       </div>
     </div>
@@ -182,15 +182,15 @@ include '../includes/header.php';
 
       <?php
       $facts_combo = [
-        ['🌿', 'Contenido por cápsula',   'Extracto de semilla de uva (Uva peruana) 99% proantocianidinas — 250 mg<br>Extracto de semilla de aguaymanto (Aguaymanto peruano) 99% proantocianidinas — 250 mg'],
+        ['🌿', 'Contenido por cápsula',   'Extracto de semilla de uva (Uva peruana) 100% proantocianidinas — 250 mg<br>Extracto de semilla de aguaymanto (Aguaymanto peruano) 100% proantocianidinas — 250 mg'],
         ['🧪', 'Ingredientes no medicinales', 'Magnesio vegetal estearato en cápsula vegetal no transgénica compuesta de goma de carbohidratos vegetales y agua purificada.'],
         ['🚫', 'No contiene',             'Conservantes, saborizantes o colorantes artificiales, azúcar, lácteos, trigo, maíz, almidón, soja ni levadura.'],
         ['💊', 'Uso sugerido',            'Adultos: 1 cápsula al día o según indicaciones médicas. Mínimo 1 mes para ver beneficios. Consulte profesional de salud para uso más allá de 3 meses.'],
         ['⚠️', 'Precauciones',           'Consulte a un médico antes de usar si está embarazada, amamantando o tomando medicamentos recetados.'],
       ];
-      foreach ($facts_combo as [$ico, $tit, $desc]) : ?>
+      foreach ($facts_combo as $i => [$ico, $tit, $desc]) : ?>
       <div class="detail-fact">
-        <div class="detail-fact__icon" style="background:var(--combo-light)"><?= $ico ?></div>
+        <div class="detail-fact__icon <?= $i === 3 ? 'cert-item__icon--capsule' : '' ?>" style="background:var(--combo-light)"><?= $ico ?></div>
         <div>
           <span class="detail-fact__title"><?= $tit ?></span>
           <span class="detail-fact__desc"><?= $desc ?></span>

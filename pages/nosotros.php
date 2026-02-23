@@ -80,7 +80,7 @@ include '../includes/header.php';
       <?php
       $vals = [
         ['🌱', 'Origen natural',     'Todo comienza en la tierra. Seleccionamos las mejores semillas peruanas para garantizar la más alta pureza en cada cápsula.'],
-        ['🔬', 'Calidad científica', 'Extractos al 99% obtenidos mediante procesos científicos que maximizan los principios activos de cada semilla.'],
+        ['🔬', 'Calidad científica', 'Extractos al 100% obtenidos mediante procesos científicos que maximizan los principios activos de cada semilla.'],
         ['🤝', 'Compromiso real',    'Nos comprometemos con la salud de nuestros clientes ofreciendo productos honestos, sin artificiales ni engaños.'],
         ['🇵🇪', 'Orgullo peruano', 'Creemos en el poder de los superalimentos peruanos y queremos compartirlos con el mundo desde Ica, Perú.'],
       ];

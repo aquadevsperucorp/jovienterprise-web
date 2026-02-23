@@ -1,72 +1,96 @@
 <?php
-/**
- * JOVI Enterprise – Contacto
- *
- * Para activar envío de emails reales con PHPMailer:
- * 1. Descarga PHPMailer: https://github.com/PHPMailer/PHPMailer
- * 2. Coloca los archivos en: ../libs/PHPMailer/src/
- * 3. Descomenta las líneas de use/require abajo
- * 4. Reemplaza las credenciales de Gmail
- */
+session_start();
 
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Exception;
-// require '../libs/PHPMailer/src/PHPMailer.php';
-// require '../libs/PHPMailer/src/SMTP.php';
-// require '../libs/PHPMailer/src/Exception.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/../includes/env.php';
+require __DIR__ . '/../libs/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/../libs/PHPMailer/src/SMTP.php';
+require __DIR__ . '/../libs/PHPMailer/src/Exception.php';
+
+$ENV = loadEnv(dirname(__DIR__) . '/../.env');
+//$ENV = loadEnv(__DIR__ . '/../.env');
 
 $page_title = 'Contacto – JOVI Enterprise';
 $page_desc  = 'Consulta sobre nuestros productos Golden Berry, Grape y Grape & Golden Berry. Notifícate para el lanzamiento.';
 $extra_css  = 'contacto.css';
 
+// Inicializar variables SIEMPRE (evita warnings)
+$nombre = $email = $telefono = $producto = $mensaje = '';
 $form_sent  = false;
 $form_error = '';
 
-// ── Procesar formulario ──────────────────────────────────────────────────
+/* ==========================================================
+   SI VIENE DEL REDIRECT (GET) → MOSTRAR MENSAJE DE ÉXITO
+========================================================== */
+if (isset($_GET['sent']) && $_GET['sent'] === '1') {
+    $form_sent = true;
+
+    // Recuperar nombre guardado en sesión
+    $nombre = $_SESSION['contact_nombre'] ?? '';
+
+    // Opcional: borrar para que no quede guardado indefinidamente
+    unset($_SESSION['contact_nombre']);
+}
+
+/* ==========================================================
+   PROCESAR FORMULARIO (POST)
+========================================================== */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     $nombre   = htmlspecialchars(trim($_POST['nombre']   ?? ''));
     $email    = htmlspecialchars(trim($_POST['email']    ?? ''));
     $telefono = htmlspecialchars(trim($_POST['telefono'] ?? ''));
     $producto = htmlspecialchars(trim($_POST['producto'] ?? ''));
     $mensaje  = htmlspecialchars(trim($_POST['mensaje']  ?? ''));
 
-    if (empty($nombre) || empty($email) || empty($mensaje)) {
-        $form_error = 'Por favor completa los campos obligatorios: Nombre, Email y Mensaje.';
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $form_error = 'El email ingresado no tiene un formato válido.';
-    } else {
-        // ── ACTIVAR PHPMAILER ────────────────────────────────────────────
-        // try {
-        //     $mail = new PHPMailer(true);
-        //     $mail->isSMTP();
-        //     $mail->Host       = 'smtp.gmail.com';
-        //     $mail->SMTPAuth   = true;
-        //     $mail->Username   = 'tu@gmail.com';
-        //     $mail->Password   = 'xxxx xxxx xxxx xxxx';
-        //     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        //     $mail->Port       = 587;
-        //     $mail->CharSet    = 'UTF-8';
-        //     $mail->setFrom('tu@gmail.com', 'JOVI Enterprise Web');
-        //     $mail->addAddress('tu@gmail.com');
-        //     $mail->addReplyTo($email, $nombre);
-        //     $mail->isHTML(true);
-        //     $mail->Subject = "✉️ Consulta JOVI – $producto";
-        //     $mail->Body    = "
-        //         <h2 style='color:#2a7035'>Nueva consulta — jovienterp.com</h2>
-        //         <p><b>Nombre:</b> $nombre</p>
-        //         <p><b>Email:</b> $email</p>
-        //         <p><b>Teléfono:</b> $telefono</p>
-        //         <p><b>Producto de interés:</b> $producto</p>
-        //         <hr>
-        //         <p><b>Mensaje:</b></p><p>$mensaje</p>
-        //     ";
-        //     $mail->send();
-        //     $form_sent = true;
-        // } catch (Exception $e) {
-        //     $form_error = 'Error al enviar el mensaje. Inténtalo de nuevo.';
-        // }
+    if ($nombre && $email && $mensaje) {
+      try {
+          $mail = new PHPMailer(true);
 
-        $form_sent = true; // ← Quitar cuando actives PHPMailer
+          // Configuración SMTP Gmail
+          $mail->isSMTP();
+          $mail->SMTPAuth   = true; 
+          $mail->CharSet    = 'UTF-8';
+          $mail->Host       = $ENV['SMTP_HOST'] ?? 'smtp.gmail.com';
+          $mail->Username   = $ENV['SMTP_USER'] ?? '';
+          $mail->Password   = $ENV['SMTP_PASS'] ?? '';
+          $mail->Port       = (int)($ENV['SMTP_PORT'] ?? 465);
+          $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+
+          // Remitente y destinatario
+          $mail->setFrom($ENV['MAIL_FROM'], $ENV['MAIL_FROM_NAME']);
+          $mail->addAddress($ENV['MAIL_TO']);
+          $mail->addReplyTo($email, $nombre);
+
+          // Contenido del email
+          $mail->isHTML(true);
+          $mail->Subject = "Nueva solicitud de venta en JOVI ENTERPRISE WEB";
+          $mail->Body    = "<h2>Nuevo mensaje de contacto</h2>
+              <p><strong>Nombre:</strong> {$nombre}</p>
+              <p><strong>Email:</strong> {$email}</p>
+              <p><strong>Teléfono:</strong> {$telefono}</p>
+              <p><strong>Producto:</strong> {$producto}</p>
+              <hr>
+              <p><strong>Mensaje:</strong></p>
+              <p>{$mensaje}</p>
+          ";
+
+          $mail->send();
+
+          // Guardar nombre en sesión para mostrarlo después del redirect
+          $_SESSION['contact_nombre'] = $nombre;
+
+          // PRG → evitar reenvío con F5
+          header("Location: " . $_SERVER['PHP_SELF'] . "?sent=1");
+          exit;
+
+      } catch (Exception $e) {
+          $form_error = "Error al enviar: " . $mail->ErrorInfo;
+      }
+    } else {
+        $form_error = 'Por favor completa todos los campos requeridos.';
     }
 }
 
@@ -107,7 +131,7 @@ include '../includes/header.php';
           <div class="cinfo-item__icon">📧</div>
           <div>
             <span class="cinfo-item__title">Email</span>
-            <span class="cinfo-item__val">contacto@jovienterp.com</span>
+            <span class="cinfo-item__val">jovienterp@gmail.com</span>
           </div>
         </div>
         <div class="cinfo-item">
@@ -164,7 +188,7 @@ include '../includes/header.php';
           <div class="form-success">
             <span class="form-success__icon">🌿</span>
             <h3>¡Mensaje recibido!</h3>
-            <p>Gracias <strong><?= htmlspecialchars($_POST['nombre'] ?? '') ?></strong>. Te contactaremos pronto con información sobre nuestros productos.</p>
+            <p>Gracias <?= htmlspecialchars($nombre) ?: 'por escribirnos' ?>. Te contactaremos pronto con información sobre nuestros productos.</p>
             <a href="contacto.php" class="btn btn--outline btn--lg" style="margin-top:20px">Enviar otro mensaje</a>
           </div>
 

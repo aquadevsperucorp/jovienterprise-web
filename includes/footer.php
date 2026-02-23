@@ -19,12 +19,6 @@
           Suplementos medicinales 100% naturales a base de semillas de uva y aguaymanto peruano.<br>
           <em>Grown &amp; Cultivated in Peru.</em>
         </p>
-        <div class="footer__social" role="list">
-          <a href="#" class="footer__social-link" role="listitem" aria-label="Facebook">📘</a>
-          <a href="#" class="footer__social-link" role="listitem" aria-label="Instagram">📷</a>
-          <a href="https://wa.me/51999999999" class="footer__social-link" role="listitem" aria-label="WhatsApp">💬</a>
-          <a href="#" class="footer__social-link" role="listitem" aria-label="TikTok">🎵</a>
-        </div>
       </div>
 
       <!-- Nav -->
@@ -58,7 +52,7 @@
           </a>
           <a href="mailto:contacto@jovienterp.com" class="footer__contact-item">
             <span class="footer__contact-icon">✉️</span>
-            <span class="footer__contact-text">contacto@jovienterp.com</span>
+            <span class="footer__contact-text">jovienterp@gmail.com</span>
           </a>
           <a href="https://wa.me/51999999999" class="footer__contact-item">
             <span class="footer__contact-icon">💬</span>
