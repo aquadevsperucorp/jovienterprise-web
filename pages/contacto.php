@@ -138,7 +138,7 @@ include '../includes/header.php';
           <div class="cinfo-item__icon">💬</div>
           <div>
             <span class="cinfo-item__title">WhatsApp</span>
-            <span class="cinfo-item__val">+51 999 999 999</span>
+            <span class="cinfo-item__val">+51 908 653 582</span>
           </div>
         </div>
         <div class="cinfo-item">
@@ -221,7 +221,7 @@ include '../includes/header.php';
               <div class="form-group">
                 <label class="form-label" for="telefono">Teléfono / WhatsApp</label>
                 <input type="tel" id="telefono" name="telefono" class="form-control"
-                  placeholder="+51 999 999 999" autocomplete="tel"
+                  placeholder="+51 908 653 582" autocomplete="tel"
                   value="<?= htmlspecialchars($_POST['telefono'] ?? '') ?>">
               </div>
               <div class="form-group">

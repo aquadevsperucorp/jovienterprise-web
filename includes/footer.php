@@ -54,9 +54,9 @@
             <span class="footer__contact-icon">✉️</span>
             <span class="footer__contact-text">jovienterp@gmail.com</span>
           </a>
-          <a href="https://wa.me/51999999999" class="footer__contact-item">
+          <a href="https://wa.me/51908653582" class="footer__contact-item">
             <span class="footer__contact-icon">💬</span>
-            <span class="footer__contact-text">+51 999 999 999</span>
+            <span class="footer__contact-text">+51 908 653 582</span>
           </a>
         </div>
       </div>
