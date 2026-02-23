@@ -486,6 +486,12 @@ h1, h2, h3, h4 {
 .cert-item__title { font-size: 0.85rem; font-weight: 700; color: var(--text); }
 .cert-item__desc { font-size: 0.72rem; color: var(--text-3); }
 
+.cert-item__icon--capsule {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  filter: sepia(1) saturate(4) hue-rotate(10deg) brightness(1.1);
+}
+
 /* ── FOOTER ── */
 .footer {
   background: linear-gradient(175deg, #1c1910 0%, #0e0c07 100%);
