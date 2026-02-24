@@ -64,8 +64,27 @@
     </div>
 
     <div class="footer__bottom">
-      <span>&copy; <?= date('Y') ?> JOVI Enterprise. Todos los derechos reservados.</span>
-      <span>🌿 Grown &amp; Cultivated in Peru</span>
+      <span class="footer__copy">
+        <span class="footer__rights">
+          &copy; <?= date('Y') ?> JOVI Enterprise. Todos los derechos reservados.
+        </span>
+
+        <span class="footer__dev">
+          Desarrollado por
+          <a href="https://www.aquadevsperu.com"
+            target="_blank"
+            rel="noopener"
+            class="dev-link notranslate"
+            translate="no">
+            <img src="assets/images/logo_aquadevs.png"
+                alt="Aquadevs Perú"
+                class="dev-logo">
+            Aquadevs Perú
+          </a>
+        </span>
+      </span>
+
+      <span class="footer__origin">🌿 Grown &amp; Cultivated in Peru</span>
     </div>
   </div>
 </footer>
