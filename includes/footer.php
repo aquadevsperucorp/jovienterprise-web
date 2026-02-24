@@ -72,7 +72,7 @@
           </a>
           <a href="mailto:contacto@jovienterp.com" class="footer__contact-item">
             <span class="footer__contact-icon notranslate" translate="no">✉️</span>
-            <span class="footer__contact-text notranslate" translate="no">jovienterp@gmail.com</span>
+            <span class="footer__contact-text notranslate" translate="no">jovienterprise26@gmail.com</span>
           </a>
           <a href="https://wa.me/51908653582" class="footer__contact-item">
             <span class="footer__contact-icon notranslate" translate="no">💬</span>
