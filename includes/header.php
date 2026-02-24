@@ -73,10 +73,13 @@ $base    = (strpos($_SERVER['PHP_SELF'], '/pages/') !== false) ? '../' : '';
 <!-- ═════════════════════════ MOBILE MENU ═══════════════════════════════ -->
 <div class="nav__mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
   <div class="nav__mobile-menu-header">
-    <div class="nav__mobile-logo">
+    <a href="<?= $base ?>index.php" class="nav__mobile-logo" aria-label="JOVI Enterprise – Inicio">
       <img src="<?= $base ?>assets/images/logo_jovi_dark.png" alt="JOVI Enterprise" class="nav__mobile-logo-img">
-    </div>
-    <button class="nav__mobile-close" id="mobileClose" aria-label="Cerrar menú">✕</button>
+    </a>
+
+    <button class="nav__mobile-close" id="mobileClose" aria-label="Cerrar menú">
+      ✕
+    </button>
   </div>
   <nav aria-label="Navegación móvil">
     <a href="<?= $base ?>index.php"           class="nav-mobile-link">

@@ -259,29 +259,36 @@ h1, h2, h3, h4 {
 }
 .nav__mobile-menu.open { display: flex; }
 
-/* Header del menu móvil */
-.nav__mobile-menu-header {
+/* Header del menú móvil: fijo arriba, con safe-area */
+.nav__mobile-menu-header{
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0 16px;
+
+  /* Espaciado normal */
+  padding: 14px 24px;
+
+  /* Safe area solo aquí (NO en el botón) */
+  padding-top: calc(14px + env(safe-area-inset-top));
+
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
-  margin-bottom: 12px;
-  flex-shrink: 0;
 }
-.nav__mobile-logo {
-  display: flex;
+/* Logo del menú móvil */
+.nav__mobile-logo{
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-family: var(--font-d);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text);
+  text-decoration: none;
 }
+
 .nav__mobile-logo span { font-size: 1.5rem; }
 
 .nav__mobile-logo-img{
-  height: 28px;
+  height: 28px;     /* ajusta aquí */
   width: auto;
   display: block;
 }
@@ -326,16 +333,17 @@ h1, h2, h3, h4 {
   color: var(--golden-3);
   background: var(--golden-bg);
 }
-.nav__mobile-close {
+
+/* Botón cerrar alineado y sin “salirse” */
+.nav__mobile-close{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
   background: var(--bg-2);
   border: 1px solid var(--border);
-  width: 38px; height: 38px;
-  border-radius: 50%;
   cursor: pointer;
-  font-size: 1rem;
-  display: flex; align-items: center; justify-content: center;
-  transition: var(--t);
-  flex-shrink: 0;
 }
 .nav__mobile-close:hover { background: var(--golden-bg); color: var(--golden-3); }
 
