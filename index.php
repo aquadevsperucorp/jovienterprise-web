@@ -1,6 +1,6 @@
 <?php
 $page_title = 'JOVI Enterprise – Suplementos Naturales del Perú';
-$page_desc  = 'Golden Berry, Grape y Grape & Golden Berry. Cápsulas medicinales 100% naturales a base de semillas peruanas. Próximo lanzamiento.';
+$page_desc  = '<span class = "notranslate" translate="no">Golden Berry</span>, <span class = "notranslate" translate="no">Grape</span> y <span class = "notranslate" translate="no">Grape & Golden Berry</span>. Cápsulas medicinales 100% naturales a base de semillas peruanas. Próximo lanzamiento.';
 $extra_css  = 'index.css';
 include 'includes/header.php';
 ?>
@@ -42,11 +42,11 @@ include 'includes/header.php';
       <div class="hero__imgs-grid">
         <div class="hero__img-card hero__img-card--a">
           <img src="assets/images/aguaymanto_3.jpg" alt="Aguaymanto peruano – Golden Berry" loading="eager">
-          <span class="img-label" style="color:var(--golden-3)">🌟 Golden Berry</span>
+          <span class="img-label notranslate" translate="no" style="color:var(--golden-3)">🌟 Golden Berry</span>
         </div>
         <div class="hero__img-card hero__img-card--b">
           <img src="assets/images/uva_2.jpg" alt="Uva peruana – Grape" loading="eager">
-          <span class="img-label" style="color:var(--grape-3)">🍇 Grape</span>
+          <span class="img-label notranslate" translate="no" style="color:var(--grape-3)">🍇 Grape</span>
         </div>
         <div class="hero__img-card hero__img-card--c">
           <img src="assets/images/vall_peru_1.jpg" alt="Valle del Perú" loading="lazy">
@@ -87,7 +87,7 @@ include 'includes/header.php';
         </div>
         <div class="coming-card__body">
           <div class="coming-card__emoji">🌟</div>
-          <div class="coming-card__name">Golden Berry</div>
+          <div class="coming-card__name notranslate" translate="no">Golden Berry</div>
           <span class="coming-card__mg">500 mg · 60 cáps</span>
           <span class="coming-card__soon">Próximamente</span>
         </div>
@@ -100,7 +100,7 @@ include 'includes/header.php';
         </div>
         <div class="coming-card__body">
           <div class="coming-card__emoji">🍇</div>
-          <div class="coming-card__name">Grape</div>
+          <div class="coming-card__name notranslate" translate="no">Grape</div>
           <span class="coming-card__mg">500 mg · 60 cáps</span>
           <span class="coming-card__soon">Próximamente</span>
         </div>
@@ -116,7 +116,7 @@ include 'includes/header.php';
         </div>
         <div class="coming-card__body">
           <div class="coming-card__emoji">🌿</div>
-          <div class="coming-card__name">Grape &amp; Golden Berry</div>
+          <div class="coming-card__name notranslate" translate="no">Grape &amp; Golden Berry</div>
           <span class="coming-card__mg">500 mg · 60 cáps</span>
           <span class="coming-card__soon">Próximamente</span>
         </div>
@@ -164,7 +164,7 @@ include 'includes/header.php';
           <span class="product-card__version">v1.0</span>
         </div>
         <div class="product-card__header">
-          <h3 class="product-card__title">Grape</h3>
+          <h3 class="product-card__title notranslate" translate="no">Grape</h3>
           <div class="product-card__sub">100% Proantocianidinas · Uva</div>
           <div class="product-card__mg">500 mg</div>
           <span class="product-card__caps">60 Cápsulas Vegetales</span>
@@ -188,7 +188,7 @@ include 'includes/header.php';
           <span class="product-card__version">v2.0</span>
         </div>
         <div class="product-card__header">
-          <h3 class="product-card__title">Golden Berry</h3>
+          <h3 class="product-card__title notranslate" translate="no">Golden Berry</h3>
           <div class="product-card__sub">Extracto de Aguaymanto</div>
           <div class="product-card__mg">500 mg</div>
           <span class="product-card__caps">60 Cápsulas Vegetales</span>
@@ -215,7 +215,7 @@ include 'includes/header.php';
           <span class="product-card__version">v3.0</span>
         </div>
         <div class="product-card__header">
-          <h3 class="product-card__title">Grape &amp; Golden Berry</h3>
+          <h3 class="product-card__title notranslate" translate="no">Grape &amp; Golden Berry</h3>
           <div class="product-card__sub">Fórmula Combinada</div>
           <div class="product-card__mg">250 mg + 250 mg</div>
           <span class="product-card__caps">60 Cápsulas Vegetales</span>
@@ -301,7 +301,9 @@ include 'includes/header.php';
           🍇 Uva + Aguaymanto 🌟
         </div>
         <div style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);background:rgba(23,64,32,.92);color:white;border-radius:100px;padding:7px 18px;font-size:.74rem;font-weight:700;white-space:nowrap">
-          Grape &amp; Golden Berry v3.0
+          <span class = "notranslate" translate="no">  
+            Grape &amp; Golden Berry v3.0
+          </span>
         </div>
       </div>
     </div>

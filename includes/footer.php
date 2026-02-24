@@ -38,9 +38,27 @@
       <div>
         <h4 class="footer__col-title">Productos</h4>
         <ul class="footer__links">
-          <li><a href="<?= $base ?>pages/productos.php#golden">🌟 Golden Berry</a></li>
-          <li><a href="<?= $base ?>pages/productos.php#grape">🍇 Grape</a></li>
-          <li><a href="<?= $base ?>pages/productos.php#combo">🌿 Grape &amp; Golden Berry</a></li>
+          <li>
+            <a href="<?= $base ?>pages/productos.php#golden"> 
+              <span class = "notranslate" translate="no">
+                🌟 Golden Berry
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="<?= $base ?>pages/productos.php#grape">
+              <span class = "notranslate" translate="no">
+                🍇 Grape
+               </span>
+            </a>
+          </li>
+          <li>
+            <a href="<?= $base ?>pages/productos.php#combo">
+              <span class = "notranslate" translate="no">
+                🌿 Grape &amp; Golden Berry
+              </span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -49,16 +67,16 @@
         <h4 class="footer__col-title">Contacto</h4>
         <div class="footer__links">
           <a href="https://maps.google.com/?q=Ica,Peru" target="_blank" rel="noopener" class="footer__contact-item">
-            <span class="footer__contact-icon">📍</span>
-            <span class="footer__contact-text">Ica, Perú</span>
+            <span class="footer__contact-icon notranslate" translate="no">📍</span>
+            <span class="footer__contact-text notranslate" translate="no">Ica, Perú</span>
           </a>
           <a href="mailto:contacto@jovienterp.com" class="footer__contact-item">
-            <span class="footer__contact-icon">✉️</span>
-            <span class="footer__contact-text">jovienterp@gmail.com</span>
+            <span class="footer__contact-icon notranslate" translate="no">✉️</span>
+            <span class="footer__contact-text notranslate" translate="no">jovienterp@gmail.com</span>
           </a>
           <a href="https://wa.me/51908653582" class="footer__contact-item">
-            <span class="footer__contact-icon">💬</span>
-            <span class="footer__contact-text">+51 908 653 582</span>
+            <span class="footer__contact-icon notranslate" translate="no">💬</span>
+            <span class="footer__contact-text notranslate" translate="no">+51 908 653 582</span>
           </a>
         </div>
       </div>
@@ -79,9 +97,9 @@
             class="dev-link notranslate"
             translate="no">
             <img src="<?= $base ?>assets/images/logo_aquadevs.png"
-                alt="Aquadevs Perú"
+                alt="Aquadevs Peru"
                 class="dev-logo">
-            Aquadevs Perú
+            Aquadevs Peru
           </a>
         </span>
       </span>
