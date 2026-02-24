@@ -280,6 +280,12 @@ h1, h2, h3, h4 {
 }
 .nav__mobile-logo span { font-size: 1.5rem; }
 
+.nav__mobile-logo-img{
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
 .nav__mobile-menu nav { display: flex; flex-direction: column; gap: 3px; flex: 1; }
 .nav-mobile-link {
   display: flex;
@@ -675,3 +681,24 @@ h1, h2, h3, h4 {
 .footer__origin {
   color: rgba(255,255,255,0.28);
 }
+
+.nav__logo-img {
+  height: 40px; /* ajusta según tu diseño */
+  width: auto;
+  display: block;
+}
+
+.nav__logo-img--footer {
+  height: 80px; /* ajusta según tu diseño */
+  width: auto;
+  display: block;
+}
+
+/* --- Logo swap según scroll --- */
+/* Default (top/hero): logo LIGHT */
+.nav__logo-img--light { display: block; }
+.nav__logo-img--dark  { display: none; }
+
+/* Scrolled: logo DARK */
+.nav.scrolled .nav__logo-img--light { display: none; }
+.nav.scrolled .nav__logo-img--dark  { display: block; }

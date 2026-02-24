@@ -12,8 +12,10 @@
       <!-- Brand -->
       <div>
         <div class="footer__logo">
-          <span class="footer__logo-icon" aria-hidden="true">🌿</span>
-          Jovi Enterprise
+          <img 
+            src="<?= $base ?>assets/images/logo_jovi_light.png"
+            alt="JOVI Enterprise"
+            class="nav__logo-img--footer">
         </div>
         <p class="footer__tagline">
           Suplementos medicinales 100% naturales a base de semillas de uva y aguaymanto peruano.<br>
@@ -76,7 +78,7 @@
             rel="noopener"
             class="dev-link notranslate"
             translate="no">
-            <img src="assets/images/logo_aquadevs.png"
+            <img src="<?= $base ?>assets/images/logo_aquadevs.png"
                 alt="Aquadevs Perú"
                 class="dev-logo">
             Aquadevs Perú
