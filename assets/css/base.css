@@ -259,26 +259,39 @@ h1, h2, h3, h4 {
 }
 .nav__mobile-menu.open { display: flex; }
 
-/* Header del menu móvil */
-.nav__mobile-menu-header {
+/* Header del menú móvil: fijo arriba, con safe-area */
+.nav__mobile-menu-header{
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0 16px;
+
+  /* Espaciado normal */
+  padding: 14px 24px;
+
+  /* Safe area solo aquí (NO en el botón) */
+  padding-top: calc(14px + env(safe-area-inset-top));
+
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
-  margin-bottom: 12px;
-  flex-shrink: 0;
 }
-.nav__mobile-logo {
-  display: flex;
+/* Logo del menú móvil */
+.nav__mobile-logo{
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-family: var(--font-d);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text);
+  text-decoration: none;
 }
+
 .nav__mobile-logo span { font-size: 1.5rem; }
+
+.nav__mobile-logo-img{
+  height: 28px;     /* ajusta aquí */
+  width: auto;
+  display: block;
+}
 
 .nav__mobile-menu nav { display: flex; flex-direction: column; gap: 3px; flex: 1; }
 .nav-mobile-link {
@@ -320,16 +333,17 @@ h1, h2, h3, h4 {
   color: var(--golden-3);
   background: var(--golden-bg);
 }
-.nav__mobile-close {
+
+/* Botón cerrar alineado y sin “salirse” */
+.nav__mobile-close{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
   background: var(--bg-2);
   border: 1px solid var(--border);
-  width: 38px; height: 38px;
-  border-radius: 50%;
   cursor: pointer;
-  font-size: 1rem;
-  display: flex; align-items: center; justify-content: center;
-  transition: var(--t);
-  flex-shrink: 0;
 }
 .nav__mobile-close:hover { background: var(--golden-bg); color: var(--golden-3); }
 
@@ -486,6 +500,12 @@ h1, h2, h3, h4 {
 .cert-item__title { font-size: 0.85rem; font-weight: 700; color: var(--text); }
 .cert-item__desc { font-size: 0.72rem; color: var(--text-3); }
 
+.cert-item__icon--capsule {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  filter: sepia(1) saturate(4) hue-rotate(10deg) brightness(1.1);
+}
+
 /* ── FOOTER ── */
 .footer {
   background: linear-gradient(175deg, #1c1910 0%, #0e0c07 100%);
@@ -624,3 +644,69 @@ h1, h2, h3, h4 {
   .footer__contact-item { font-size: 0.82rem; }
   .footer__tagline { max-width: 100%; }
 }
+
+.footer__copy {
+  display: flex;
+  flex-direction: column;   /* 👈 esto baja "Desarrollado por" */
+  gap: 6px;
+  line-height: 1.2;
+}
+
+.footer__rights {
+  color: rgba(255,255,255,0.32); /* un pelín más visible */
+}
+
+.footer__dev {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;       /* más fino */
+  color: rgba(255,255,255,0.20);
+  margin-top: 4px;
+}
+
+.dev-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.30);
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.dev-link:hover {
+  color: rgba(255,255,255,0.55);
+  opacity: 1;
+}
+
+.dev-logo {
+  height: 14px;
+  width: auto;
+  display: inline-block;
+}
+
+/* opcional: que el bloque derecho mantenga presencia */
+.footer__origin {
+  color: rgba(255,255,255,0.28);
+}
+
+.nav__logo-img {
+  height: 40px; /* ajusta según tu diseño */
+  width: auto;
+  display: block;
+}
+
+.nav__logo-img--footer {
+  height: 80px; /* ajusta según tu diseño */
+  width: auto;
+  display: block;
+}
+
+/* --- Logo swap según scroll --- */
+/* Default (top/hero): logo LIGHT */
+.nav__logo-img--light { display: block; }
+.nav__logo-img--dark  { display: none; }
+
+/* Scrolled: logo DARK */
+.nav.scrolled .nav__logo-img--light { display: none; }
+.nav.scrolled .nav__logo-img--dark  { display: block; }

@@ -1,6 +1,6 @@
 <?php
 $page_title = 'JOVI Enterprise – Suplementos Naturales del Perú';
-$page_desc  = 'Golden Berry, Grape y Grape & Golden Berry. Cápsulas medicinales 100% naturales a base de semillas peruanas. Próximo lanzamiento.';
+$page_desc  = '<span class = "notranslate" translate="no">Golden Berry</span>, <span class = "notranslate" translate="no">Grape</span> y <span class = "notranslate" translate="no">Grape & Golden Berry</span>. Cápsulas medicinales 100% naturales a base de semillas peruanas. Próximo lanzamiento.';
 $extra_css  = 'index.css';
 include 'includes/header.php';
 ?>
@@ -42,11 +42,11 @@ include 'includes/header.php';
       <div class="hero__imgs-grid">
         <div class="hero__img-card hero__img-card--a">
           <img src="assets/images/aguaymanto_3.jpg" alt="Aguaymanto peruano – Golden Berry" loading="eager">
-          <span class="img-label" style="color:var(--golden-3)">🌟 Golden Berry</span>
+          <span class="img-label notranslate" translate="no" style="color:var(--golden-3)">🌟 Golden Berry</span>
         </div>
         <div class="hero__img-card hero__img-card--b">
           <img src="assets/images/uva_2.jpg" alt="Uva peruana – Grape" loading="eager">
-          <span class="img-label" style="color:var(--grape-3)">🍇 Grape</span>
+          <span class="img-label notranslate" translate="no" style="color:var(--grape-3)">🍇 Grape</span>
         </div>
         <div class="hero__img-card hero__img-card--c">
           <img src="assets/images/vall_peru_1.jpg" alt="Valle del Perú" loading="lazy">
@@ -87,7 +87,7 @@ include 'includes/header.php';
         </div>
         <div class="coming-card__body">
           <div class="coming-card__emoji">🌟</div>
-          <div class="coming-card__name">Golden Berry</div>
+          <div class="coming-card__name notranslate" translate="no">Golden Berry</div>
           <span class="coming-card__mg">500 mg · 60 cáps</span>
           <span class="coming-card__soon">Próximamente</span>
         </div>
@@ -100,7 +100,7 @@ include 'includes/header.php';
         </div>
         <div class="coming-card__body">
           <div class="coming-card__emoji">🍇</div>
-          <div class="coming-card__name">Grape</div>
+          <div class="coming-card__name notranslate" translate="no">Grape</div>
           <span class="coming-card__mg">500 mg · 60 cáps</span>
           <span class="coming-card__soon">Próximamente</span>
         </div>
@@ -116,7 +116,7 @@ include 'includes/header.php';
         </div>
         <div class="coming-card__body">
           <div class="coming-card__emoji">🌿</div>
-          <div class="coming-card__name">Grape &amp; Golden Berry</div>
+          <div class="coming-card__name notranslate" translate="no">Grape &amp; Golden Berry</div>
           <span class="coming-card__mg">500 mg · 60 cáps</span>
           <span class="coming-card__soon">Próximamente</span>
         </div>
@@ -152,7 +152,7 @@ include 'includes/header.php';
     <div class="section-header" data-aos="fade-up">
       <span class="section-tag">Catálogo</span>
       <h2 class="section-title">Tres fórmulas, <span>un propósito</span></h2>
-      <p class="section-desc">Extractos al 99% de las semillas más potentes del Perú, en cápsulas vegetales sin OGM.</p>
+      <p class="section-desc">Extractos al 100% de las semillas más potentes del Perú, en cápsulas vegetales sin OGM.</p>
     </div>
 
     <div class="products__grid">
@@ -164,15 +164,15 @@ include 'includes/header.php';
           <span class="product-card__version">v1.0</span>
         </div>
         <div class="product-card__header">
-          <h3 class="product-card__title">Grape</h3>
+          <h3 class="product-card__title notranslate" translate="no">Grape</h3>
           <div class="product-card__sub">100% Proantocianidinas · Uva</div>
           <div class="product-card__mg">500 mg</div>
           <span class="product-card__caps">60 Cápsulas Vegetales</span>
         </div>
         <div class="product-card__body">
-          <p class="product-card__desc">Extracto de semilla de uva peruana al 99% de proantocianidinas. Potente antioxidante para tu salud cardiovascular y circulatoria.</p>
+          <p class="product-card__desc">Extracto de semilla de uva peruana al 100% de proantocianidinas. Potente antioxidante para tu salud cardiovascular y circulatoria.</p>
           <div class="product-card__facts">
-            <div class="product-card__fact"><span class="product-card__fact-check">✓</span><span>Uva peruana 99% proantocianidinas</span></div>
+            <div class="product-card__fact"><span class="product-card__fact-check">✓</span><span>Uva peruana 100% proantocianidinas</span></div>
             <div class="product-card__fact"><span class="product-card__fact-check">✓</span><span>Sin azúcar, lácteos ni soja</span></div>
             <div class="product-card__fact"><span class="product-card__fact-check">✓</span><span>1 cápsula al día · Mínimo 1 mes</span></div>
           </div>
@@ -188,7 +188,7 @@ include 'includes/header.php';
           <span class="product-card__version">v2.0</span>
         </div>
         <div class="product-card__header">
-          <h3 class="product-card__title">Golden Berry</h3>
+          <h3 class="product-card__title notranslate" translate="no">Golden Berry</h3>
           <div class="product-card__sub">Extracto de Aguaymanto</div>
           <div class="product-card__mg">500 mg</div>
           <span class="product-card__caps">60 Cápsulas Vegetales</span>
@@ -215,7 +215,7 @@ include 'includes/header.php';
           <span class="product-card__version">v3.0</span>
         </div>
         <div class="product-card__header">
-          <h3 class="product-card__title">Grape &amp; Golden Berry</h3>
+          <h3 class="product-card__title notranslate" translate="no">Grape &amp; Golden Berry</h3>
           <div class="product-card__sub">Fórmula Combinada</div>
           <div class="product-card__mg">250 mg + 250 mg</div>
           <span class="product-card__caps">60 Cápsulas Vegetales</span>
@@ -247,15 +247,15 @@ include 'includes/header.php';
         ['🌿', '100% Natural',       'Sin conservantes, colorantes ni saborizantes artificiales en ninguno de nuestros productos.'],
         ['🇵🇪', 'Cultivado en Perú', 'Semillas seleccionadas y procesadas directamente en territorio peruano bajo rigurosos estándares.'],
         ['💊', 'Cápsula Vegetal',     'Cápsulas vegetales sin OGM compuestas de goma de carbohidrato vegetal y agua purificada.'],
-        ['🔬', '99% Extracto',        'Concentración de 99% de proantocianidinas para máxima eficacia y biodisponibilidad.'],
+        ['🔬', '100% Extracto',        'Concentración de 100% de proantocianidinas para máxima eficacia y biodisponibilidad.'],
       ];
-      foreach ($bens as $i => [$ico, $tit, $desc]) : ?>
-      <div class="benefit-card" data-aos="fade-up" data-aos-delay="<?= $i * 80 ?>">
-        <div class="benefit-card__icon" aria-hidden="true"><?= $ico ?></div>
-        <h3 class="benefit-card__title"><?= $tit ?></h3>
-        <p class="benefit-card__desc"><?= $desc ?></p>
-      </div>
-      <?php endforeach; ?>
+        foreach ($bens as $i => [$ico, $tit, $desc]) : ?>
+        <div class="benefit-card" data-aos="fade-up" data-aos-delay="<?= $i * 80 ?>">
+          <span class="cert-item__icon <?= $i === 2 ? 'cert-item__icon--capsule' : '' ?>" aria-hidden="true"><?= $ico ?></span>
+          <h3 class="benefit-card__title"><?= $tit?></h3>
+          <p class="benefit-card__desc"><?= $desc ?></p>
+        </div>
+        <?php endforeach; ?>
     </div>
   </div>
 </section>
@@ -301,7 +301,9 @@ include 'includes/header.php';
           🍇 Uva + Aguaymanto 🌟
         </div>
         <div style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);background:rgba(23,64,32,.92);color:white;border-radius:100px;padding:7px 18px;font-size:.74rem;font-weight:700;white-space:nowrap">
-          Grape &amp; Golden Berry v3.0
+          <span class = "notranslate" translate="no">  
+            Grape &amp; Golden Berry v3.0
+          </span>
         </div>
       </div>
     </div>
@@ -309,7 +311,7 @@ include 'includes/header.php';
       <span class="section-tag" style="color:var(--combo-3);background:var(--combo-bg);border-color:rgba(42,112,53,.28)">Fórmula estrella</span>
       <h2>La sinergia que<br><span style="color:var(--combo);font-style:italic">tu cuerpo necesita</span></h2>
       <p>Nuestra fórmula combinada Grape &amp; Golden Berry es el resultado de combinar los dos superalimentos peruanos más potentes en una sola cápsula de 500 mg.</p>
-      <p>250 mg de extracto de semilla de uva + 250 mg de extracto de aguaymanto, ambos al 99% de proantocianidinas, en perfecta sinergia antioxidante.</p>
+      <p>250 mg de extracto de semilla de uva + 250 mg de extracto de aguaymanto, ambos al 100% de proantocianidinas, en perfecta sinergia antioxidante.</p>
       <div class="combo-pills">
         <span class="combo-pill combo-pill--grape">🍇 250 mg Uva Peruana</span>
         <span class="combo-pill combo-pill--golden">🌟 250 mg Aguaymanto</span>
@@ -328,8 +330,8 @@ include 'includes/header.php';
       <div class="cert-item"><div class="cert-item__icon">🌿</div><div><div class="cert-item__title">100% Natural</div><div class="cert-item__desc">Sin artificiales</div></div></div>
       <div class="cert-item"><div class="cert-item__icon">🚫</div><div><div class="cert-item__title">Sin OGM</div><div class="cert-item__desc">No transgénico</div></div></div>
       <div class="cert-item"><div class="cert-item__icon">🇵🇪</div><div><div class="cert-item__title">Hecho en Perú</div><div class="cert-item__desc">Grown in Peru</div></div></div>
-      <div class="cert-item"><div class="cert-item__icon">💊</div><div><div class="cert-item__title">Cápsula Vegetal</div><div class="cert-item__desc">Sin gelatina animal</div></div></div>
-      <div class="cert-item"><div class="cert-item__icon">⚗️</div><div><div class="cert-item__title">99% Extracto</div><div class="cert-item__desc">Alta pureza</div></div></div>
+      <div class="cert-item"><div class="cert-item__icon--capsule">💊</div><div><div class="cert-item__title">Cápsula Vegetal</div><div class="cert-item__desc">Sin gelatina animal</div></div></div>
+      <div class="cert-item"><div class="cert-item__icon">⚗️</div><div><div class="cert-item__title">100% Extracto</div><div class="cert-item__desc">Alta pureza</div></div></div>
     </div>
   </div>
 </section>

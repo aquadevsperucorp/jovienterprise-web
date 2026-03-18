@@ -36,19 +36,23 @@ include '../includes/header.php';
       </div>
       <div class="detail-badge-box" style="background:linear-gradient(160deg,#fff8e0,#ffd97a);border:2px solid rgba(212,134,10,.25)">
         <span style="display:inline-block;background:var(--golden);color:white;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 13px;border-radius:100px;margin-bottom:10px">v2.0</span>
-        <h3 style="font-family:var(--font-d);font-size:clamp(1.3rem,2.5vw,1.6rem);color:var(--golden-3);margin-bottom:5px;font-weight:600">Golden Berry</h3>
+        <h3 style="font-family:var(--font-d);font-size:clamp(1.3rem,2.5vw,1.6rem);color:var(--golden-3);margin-bottom:5px;font-weight:600">
+          <span class = "notranslate" translate="no">
+            Golden Berry  
+          </span> 
+        </h3>
         <p style="font-size:.76rem;font-weight:700;color:var(--golden);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">EXTRACT 500 MG</p>
         <div class="detail-stat-row">
           <div class="detail-stat" style="background:var(--golden-light)"><span class="detail-stat__val" style="color:var(--golden-3)">500mg</span><span class="detail-stat__label">Por cápsula</span></div>
           <div class="detail-stat" style="background:var(--golden-light)"><span class="detail-stat__val" style="color:var(--golden-3)">60</span><span class="detail-stat__label">Cápsulas</span></div>
-          <div class="detail-stat" style="background:var(--golden-light)"><span class="detail-stat__val" style="color:var(--golden-3)">99%</span><span class="detail-stat__label">Extracto</span></div>
+          <div class="detail-stat" style="background:var(--golden-light)"><span class="detail-stat__val" style="color:var(--golden-3)">100%</span><span class="detail-stat__label">Extracto</span></div>
         </div>
       </div>
     </div>
 
     <!-- Info -->
     <div data-aos="fade-left">
-      <span class="section-tag">🌟 Golden Berry · Aguaymanto</span>
+      <span class="section-tag notranslate" translate="no">🌟 Golden Berry · Aguaymanto</span>
       <h2 style="font-family:var(--font-d);font-size:clamp(1.7rem,3.5vw,2.6rem);color:var(--text);margin:14px 0 16px;font-weight:600">
         Extracto de Semilla<br>de Aguaymanto
       </h2>
@@ -58,15 +62,15 @@ include '../includes/header.php';
 
       <?php
       $facts_golden = [
-        ['🌱', 'Contenido por cápsula',   'Extracto de semilla de aguaymanto (Aguaymanto peruano) 99% — 500 mg'],
+        ['🌱', 'Contenido por cápsula',   'Extracto de semilla de aguaymanto (Aguaymanto peruano) 100% — 500 mg'],
         ['🧪', 'Ingredientes no medicinales', 'Estearato de magnesio vegetal en cápsula vegetal sin OGM compuesta de goma de carbohidrato vegetal y agua purificada.'],
         ['🚫', 'No contiene',             'Conservantes, saborizantes o colorantes artificiales, azúcar, lácteos, trigo, maíz, almidón, soja ni levadura.'],
         ['💊', 'Uso sugerido',            'Adultos: 1 cápsula al día o según indicaciones médicas. Mínimo 1 mes para ver beneficios. Consulte médico para uso más allá de 3 meses.'],
         ['⚠️', 'Precauciones',           'Consulte a un médico antes de usar si está embarazada, amamantando o tomando medicamentos recetados.'],
       ];
-      foreach ($facts_golden as [$ico, $tit, $desc]) : ?>
+      foreach ($facts_golden as $i => [$ico, $tit, $desc]) : ?>
       <div class="detail-fact">
-        <div class="detail-fact__icon" style="background:var(--golden-light)"><?= $ico ?></div>
+        <div class="detail-fact__icon <?= $i === 3 ? 'cert-item__icon--capsule' : '' ?>" style="background:var(--golden-light)"><?= $ico ?></div>
         <div>
           <span class="detail-fact__title"><?= $tit ?></span>
           <span class="detail-fact__desc"><?= $desc ?></span>
@@ -89,7 +93,9 @@ include '../includes/header.php';
 
     <!-- Info -->
     <div data-aos="fade-right">
-      <span class="section-tag" style="color:var(--grape-3);background:var(--grape-bg);border-color:rgba(107,37,128,.28)">🍇 Grape · Uva Peruana</span>
+      <span class="section-tag" style="color:var(--grape-3);background:var(--grape-bg);border-color:rgba(107,37,128,.28)">
+        <span class= "notranslate" translate="no">🍇 Grape</span> · Uva Peruana
+      </span>
       <h2 style="font-family:var(--font-d);font-size:clamp(1.7rem,3.5vw,2.6rem);color:var(--text);margin:14px 0 16px;font-weight:600">
         Extracto de Semilla<br>de Uva
       </h2>
@@ -99,15 +105,15 @@ include '../includes/header.php';
 
       <?php
       $facts_grape = [
-        ['🍇', 'Contenido por cápsula',   'Extracto de semilla de uva (Uva peruana) 99% proantocianidinas — 500 mg'],
+        ['🍇', 'Contenido por cápsula',   'Extracto de semilla de uva (Uva peruana) 100% proantocianidinas — 500 mg'],
         ['🧪', 'Ingredientes no medicinales', 'Estearato de magnesio vegetal en cápsula vegetal sin OGM compuesta de goma de carbohidrato vegetal y agua purificada.'],
         ['🚫', 'No contiene',             'Conservantes, saborizantes o colorantes artificiales, azúcar, lácteos, trigo, maíz, almidón, soja ni levadura.'],
         ['💊', 'Uso sugerido',            'Adultos: 1 cápsula al día o según indicaciones médicas. Mínimo 1 mes para ver beneficios. Consulte médico para uso más allá de 3 meses.'],
         ['⚠️', 'Precauciones',           'Consulte a un médico antes de usar si está embarazada, amamantando o tomando medicamentos recetados.'],
       ];
-      foreach ($facts_grape as [$ico, $tit, $desc]) : ?>
+      foreach ($facts_grape as $i => [$ico, $tit, $desc]) : ?>
       <div class="detail-fact">
-        <div class="detail-fact__icon" style="background:var(--grape-light)"><?= $ico ?></div>
+        <div class="detail-fact__icon <?= $i === 3 ? 'cert-item__icon--capsule' : '' ?>" style="background:var(--grape-light)"><?= $ico ?></div>
         <div>
           <span class="detail-fact__title"><?= $tit ?></span>
           <span class="detail-fact__desc"><?= $desc ?></span>
@@ -130,12 +136,14 @@ include '../includes/header.php';
       </div>
       <div class="detail-badge-box" style="background:linear-gradient(160deg,#f5eafa,#dda0f0);border:2px solid rgba(107,37,128,.25)">
         <span style="display:inline-block;background:var(--grape);color:white;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 13px;border-radius:100px;margin-bottom:10px">v1.0</span>
-        <h3 style="font-family:var(--font-d);font-size:clamp(1.3rem,2.5vw,1.6rem);color:var(--grape-3);margin-bottom:5px;font-weight:600">Grape</h3>
+        <h3 style="font-family:var(--font-d);font-size:clamp(1.3rem,2.5vw,1.6rem);color:var(--grape-3);margin-bottom:5px;font-weight:600">
+          <span class="notranslate" translate="no">Grape</span>
+        </h3>
         <p style="font-size:.76rem;font-weight:700;color:var(--grape);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">100% PROANTOCIANIDINAS 500 MG</p>
         <div class="detail-stat-row">
           <div class="detail-stat" style="background:var(--grape-light)"><span class="detail-stat__val" style="color:var(--grape-3)">500mg</span><span class="detail-stat__label">Por cápsula</span></div>
           <div class="detail-stat" style="background:var(--grape-light)"><span class="detail-stat__val" style="color:var(--grape-3)">60</span><span class="detail-stat__label">Cápsulas</span></div>
-          <div class="detail-stat" style="background:var(--grape-light)"><span class="detail-stat__val" style="color:var(--grape-3)">99%</span><span class="detail-stat__label">Extracto</span></div>
+          <div class="detail-stat" style="background:var(--grape-light)"><span class="detail-stat__val" style="color:var(--grape-3)">100%</span><span class="detail-stat__label">Extracto</span></div>
         </div>
       </div>
     </div>
@@ -160,7 +168,11 @@ include '../includes/header.php';
       </div>
       <div class="detail-badge-box" style="background:linear-gradient(160deg,#e8f5ea,#a8e6aa);border:2px solid rgba(42,112,53,.25)">
         <span style="display:inline-block;background:var(--combo);color:white;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 13px;border-radius:100px;margin-bottom:10px">v3.0</span>
-        <h3 style="font-family:var(--font-d);font-size:clamp(1.1rem,2.5vw,1.4rem);color:var(--combo-3);margin-bottom:5px;font-weight:600">Grape &amp; Golden Berry</h3>
+        <h3 style="font-family:var(--font-d);font-size:clamp(1.1rem,2.5vw,1.4rem);color:var(--combo-3);margin-bottom:5px;font-weight:600">
+          <span class="notranslate" translate="no">
+            Grape &amp; Golden Berry
+          </span>
+        </h3>
         <p style="font-size:.74rem;font-weight:700;color:var(--combo);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">EXTRACT 500 MG</p>
         <div class="detail-stat-row">
           <div class="detail-stat" style="background:var(--combo-light)"><span class="detail-stat__val" style="color:var(--combo-3)">250mg</span><span class="detail-stat__label">Uva</span></div>
@@ -174,7 +186,7 @@ include '../includes/header.php';
     <div data-aos="fade-left">
       <span class="section-tag" style="color:var(--combo-3);background:var(--combo-bg);border-color:rgba(42,112,53,.28)">🌿 Fórmula Combinada</span>
       <h2 style="font-family:var(--font-d);font-size:clamp(1.7rem,3.5vw,2.6rem);color:var(--text);margin:14px 0 16px;font-weight:600">
-        Grape &amp; Golden Berry<br>Extract
+        <span class="notranslate" translate="no">Grape &amp; Golden Berry</span><br>Extract
       </h2>
       <p style="font-size:clamp(.87rem,1.7vw,.97rem);color:var(--text-2);line-height:1.8;margin-bottom:26px">
         La sinergia perfecta de los dos superalimentos peruanos más potentes. El extracto combinado de aguaymanto y semilla de uva ofrece una potencia antioxidante máxima en una sola cápsula.
@@ -182,15 +194,15 @@ include '../includes/header.php';
 
       <?php
       $facts_combo = [
-        ['🌿', 'Contenido por cápsula',   'Extracto de semilla de uva (Uva peruana) 99% proantocianidinas — 250 mg<br>Extracto de semilla de aguaymanto (Aguaymanto peruano) 99% proantocianidinas — 250 mg'],
+        ['🌿', 'Contenido por cápsula',   'Extracto de semilla de uva (Uva peruana) 100% proantocianidinas — 250 mg<br>Extracto de semilla de aguaymanto (Aguaymanto peruano) 100% proantocianidinas — 250 mg'],
         ['🧪', 'Ingredientes no medicinales', 'Magnesio vegetal estearato en cápsula vegetal no transgénica compuesta de goma de carbohidratos vegetales y agua purificada.'],
         ['🚫', 'No contiene',             'Conservantes, saborizantes o colorantes artificiales, azúcar, lácteos, trigo, maíz, almidón, soja ni levadura.'],
         ['💊', 'Uso sugerido',            'Adultos: 1 cápsula al día o según indicaciones médicas. Mínimo 1 mes para ver beneficios. Consulte profesional de salud para uso más allá de 3 meses.'],
         ['⚠️', 'Precauciones',           'Consulte a un médico antes de usar si está embarazada, amamantando o tomando medicamentos recetados.'],
       ];
-      foreach ($facts_combo as [$ico, $tit, $desc]) : ?>
+      foreach ($facts_combo as $i => [$ico, $tit, $desc]) : ?>
       <div class="detail-fact">
-        <div class="detail-fact__icon" style="background:var(--combo-light)"><?= $ico ?></div>
+        <div class="detail-fact__icon <?= $i === 3 ? 'cert-item__icon--capsule' : '' ?>" style="background:var(--combo-light)"><?= $ico ?></div>
         <div>
           <span class="detail-fact__title"><?= $tit ?></span>
           <span class="detail-fact__desc"><?= $desc ?></span>
