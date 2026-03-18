@@ -131,7 +131,7 @@ include '../includes/header.php';
           <div class="cinfo-item__icon">📧</div>
           <div>
             <span class="cinfo-item__title">Email</span>
-            <span class="cinfo-item__val">jovienterp@gmail.com</span>
+            <span class="cinfo-item__val">jovienterprise26@gmail.com</span>
           </div>
         </div>
         <div class="cinfo-item">

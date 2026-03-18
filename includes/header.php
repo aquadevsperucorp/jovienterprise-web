@@ -43,11 +43,13 @@ $base    = (strpos($_SERVER['PHP_SELF'], '/pages/') !== false) ? '../' : '';
   <div class="container nav__inner">
 
     <a href="<?= $base ?>index.php" class="nav__logo" aria-label="JOVI Enterprise – Inicio">
-      <span class="nav__logo-icon" aria-hidden="true">🌿</span>
-      <span>
-        Jovi
-        <span class="nav__logo-sub">Enterprise</span>
-      </span>
+      <img src="<?= $base ?>assets/images/logo_jovi_light.png"
+          alt="JOVI Enterprise"
+          class="nav__logo-img nav__logo-img--light">
+
+      <img src="<?= $base ?>assets/images/logo_jovi_dark.png"
+          alt="JOVI Enterprise"
+          class="nav__logo-img nav__logo-img--dark">
     </a>
 
     <ul class="nav__links" role="list">
@@ -71,10 +73,13 @@ $base    = (strpos($_SERVER['PHP_SELF'], '/pages/') !== false) ? '../' : '';
 <!-- ═════════════════════════ MOBILE MENU ═══════════════════════════════ -->
 <div class="nav__mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
   <div class="nav__mobile-menu-header">
-    <div class="nav__mobile-logo">
-      <span>🌿</span> Jovi Enterprise
-    </div>
-    <button class="nav__mobile-close" id="mobileClose" aria-label="Cerrar menú">✕</button>
+    <a href="<?= $base ?>index.php" class="nav__mobile-logo" aria-label="JOVI Enterprise – Inicio">
+      <img src="<?= $base ?>assets/images/logo_jovi_dark.png" alt="JOVI Enterprise" class="nav__mobile-logo-img">
+    </a>
+
+    <button class="nav__mobile-close" id="mobileClose" aria-label="Cerrar menú">
+      ✕
+    </button>
   </div>
   <nav aria-label="Navegación móvil">
     <a href="<?= $base ?>index.php"           class="nav-mobile-link">
