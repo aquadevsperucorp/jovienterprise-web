@@ -57,9 +57,8 @@ document.addEventListener('keydown', e => {
 //     Uncomment the line below and set your desired date.
 //     Example: new Date('2025-09-01T00:00:00')
 (function () {
-  const now    = new Date();
-  const launch = new Date(now.getFullYear(), now.getMonth() + 3, now.getDate());
-  // const launch = new Date('2025-09-01T00:00:00');
+  const LAUNCH_DATE = '2026-07-28T00:00:00';
+  const launch = new Date(LAUNCH_DATE);
 
   const els = {
     days:  document.getElementById('cd-days'),
