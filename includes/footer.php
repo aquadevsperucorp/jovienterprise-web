@@ -18,43 +18,43 @@
             class="nav__logo-img--footer">
         </div>
         <p class="footer__tagline">
-          Suplementos medicinales 100% naturales a base de semillas de uva y aguaymanto peruano.<br>
+          100% natural medicinal supplements made from grape seeds and Peruvian golden berry.<br>
           <em>Grown &amp; Cultivated in Peru.</em>
         </p>
       </div>
 
       <!-- Nav -->
       <div>
-        <h4 class="footer__col-title">Navegación</h4>
+        <h4 class="footer__col-title">Navigation</h4>
         <ul class="footer__links">
-          <li><a href="<?= $base ?>index.php">Inicio</a></li>
-          <li><a href="<?= $base ?>pages/productos.php">Productos</a></li>
-          <li><a href="<?= $base ?>pages/nosotros.php">Nosotros</a></li>
-          <li><a href="<?= $base ?>pages/contacto.php">Contacto</a></li>
+          <li><a href="<?= $base ?>index.php">Home</a></li>
+          <li><a href="<?= $base ?>pages/productos.php">Products</a></li>
+          <li><a href="<?= $base ?>pages/nosotros.php">About Us</a></li>
+          <li><a href="<?= $base ?>pages/contacto.php">Contact</a></li>
         </ul>
       </div>
 
       <!-- Products -->
       <div>
-        <h4 class="footer__col-title">Productos</h4>
+        <h4 class="footer__col-title">Products</h4>
         <ul class="footer__links">
           <li>
             <a href="<?= $base ?>pages/productos.php#golden"> 
-              <span class = "notranslate" translate="no">
+              <span class="notranslate" translate="no">
                 🌟 Golden Berry
               </span>
             </a>
           </li>
           <li>
             <a href="<?= $base ?>pages/productos.php#grape">
-              <span class = "notranslate" translate="no">
+              <span class="notranslate" translate="no">
                 🍇 Grape
                </span>
             </a>
           </li>
           <li>
             <a href="<?= $base ?>pages/productos.php#combo">
-              <span class = "notranslate" translate="no">
+              <span class="notranslate" translate="no">
                 🌿 Grape &amp; Golden Berry
               </span>
             </a>
@@ -62,9 +62,9 @@
         </ul>
       </div>
 
-      <!-- Contacto — icono siempre alineado con el texto -->
+      <!-- Contact — icon always aligned with text -->
       <div>
-        <h4 class="footer__col-title">Contacto</h4>
+        <h4 class="footer__col-title">Contact</h4>
         <div class="footer__links">
           <a href="https://maps.google.com/?q=Ica,Peru" target="_blank" rel="noopener" class="footer__contact-item">
             <span class="footer__contact-icon notranslate" translate="no">📍</span>
@@ -86,11 +86,11 @@
     <div class="footer__bottom">
       <span class="footer__copy">
         <span class="footer__rights">
-          &copy; <?= date('Y') ?> JOVI Enterprise. Todos los derechos reservados.
+          &copy; <?= date('Y') ?> JOVI Enterprise. All rights reserved.
         </span>
 
         <span class="footer__dev">
-          Desarrollado por
+          Developed by
           <a href="https://www.aquadevsperu.com"
             target="_blank"
             rel="noopener"

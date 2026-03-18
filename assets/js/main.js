@@ -13,7 +13,7 @@ AOS.init({
 });
 
 // ── NAV SCROLL ──
-// Solo toggle de clase — los colores los maneja CSS (.nav vs .nav.scrolled)
+// Only toggles the class — colours are handled by CSS (.nav vs .nav.scrolled)
 const nav = document.getElementById('nav');
 if (nav) {
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
@@ -22,8 +22,8 @@ if (nav) {
 }
 
 // ── MOBILE MENU ──
-const hamburger  = document.getElementById('navToggle');
-const mobileMenu = document.getElementById('mobileMenu');
+const hamburger   = document.getElementById('navToggle');
+const mobileMenu  = document.getElementById('mobileMenu');
 const mobileClose = document.getElementById('mobileClose');
 
 function openMenu() {
@@ -47,15 +47,15 @@ if (mobileMenu) {
   mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 }
 
-// Close menu on escape key
+// Close the menu when the Escape key is pressed
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && mobileMenu?.classList.contains('open')) closeMenu();
 });
 
 // ── COUNTDOWN ──
-// ⚠️  PARA CAMBIAR LA FECHA:
-//     Descomenta la línea `const launch = new Date('...')` y ajusta la fecha.
-//     Ejemplo: new Date('2025-09-01T00:00:00')
+// ⚠️  TO CHANGE THE LAUNCH DATE:
+//     Uncomment the line below and set your desired date.
+//     Example: new Date('2025-09-01T00:00:00')
 (function () {
   const now    = new Date();
   const launch = new Date(now.getFullYear(), now.getMonth() + 3, now.getDate());
@@ -88,19 +88,19 @@ document.addEventListener('keydown', e => {
   setInterval(tick, 1000);
 })();
 
-// ── CONTACT FORM UI FEEDBACK ──
+// ── CONTACT FORM — UI FEEDBACK ──
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', () => {
     const btn = contactForm.querySelector('[type="submit"]');
     if (btn) {
-      btn.innerHTML = '<span>Enviando…</span>';
+      btn.innerHTML = '<span>Sending…</span>';
       btn.disabled  = true;
     }
   });
 }
 
-// ── SMOOTH IMAGE FADE-IN (avoids CLS) ──
+// ── SMOOTH IMAGE FADE-IN (prevents layout shift) ──
 document.querySelectorAll('img').forEach(img => {
   if (img.complete) return;
   img.style.opacity    = '0';
@@ -109,9 +109,9 @@ document.querySelectorAll('img').forEach(img => {
   img.addEventListener('error', () => { img.style.opacity = '0.4'; });
 });
 
-// ── PAGE HERO BG PARALLAX TRIGGER ──
+// ── PAGE HERO BACKGROUND PARALLAX ──
 document.querySelectorAll('.page-hero__bg').forEach(bg => {
-  bg.classList.add('loaded'); // triggers CSS scale animation
+  bg.classList.add('loaded'); // triggers the CSS scale animation
 });
 
 // ── SUBTLE CARD TILT (desktop only) ──
