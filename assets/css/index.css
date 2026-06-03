@@ -19,7 +19,8 @@
 .hero__bg-img {
   position: absolute;
   inset: 0;
-  background: url('../images/vall_peru_1.jpg') center/cover no-repeat;
+  /* background: url('../images/vall_peru_1.jpg') center/cover no-repeat; */
+  background: url('../images/background-jovi-enterprise.jpg') center/cover no-repeat;
   transform: scale(1.08);
   animation: heroImgEntry 1.4s ease forwards;
 }
@@ -287,7 +288,7 @@
   box-shadow: 0 16px 40px rgba(0,0,0,0.3);
 }
 .coming-card__img {
-  height: clamp(120px, 17vw, 200px);
+  height: 380px;
   overflow: hidden;
   position: relative;
 }
