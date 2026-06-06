@@ -111,6 +111,7 @@
 
 <!-- ═══════════════════════════════ SCRIPTS ══════════════════════════════ -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="<?= $base ?>assets/js/main.js"></script>
+<!-- <script src="<?= $base ?>assets/js/main.js"></script> -->
+<script src="<?= $base ?>assets/js/main.js?v=<?= filemtime(__DIR__.'/../assets/js/main.js') ?>"></script>
 </body>
 </html>
