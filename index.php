@@ -115,7 +115,7 @@ include 'includes/header.php';
         <div class="coming-card__body">
           <div class="coming-card__emoji">🌟</div>
           <div class="coming-card__name notranslate" translate="no">Golden Berry</div>
-          <span class="coming-card__mg">500 mg · 60 caps</span>
+          <span class="coming-card__mg">400 mg · 60 caps</span>
           <span class="coming-card__soon">Coming Soon</span>
         </div>
       </div>
