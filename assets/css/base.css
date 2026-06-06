@@ -630,6 +630,7 @@ h1, h2, h3, h4 {
   .footer__grid { grid-template-columns: 1fr 1fr; row-gap: 36px; }
   .nav__links, .nav__cta { display: none; }
   .nav__hamburger { display: flex; }
+  .nav__logo { display: none; } /* oculta logo del nav en móvil, el menú móvil tiene el suyo */
 }
 
 /* ── RESPONSIVE — MOBILE ── */
@@ -710,3 +711,6 @@ h1, h2, h3, h4 {
 /* Scrolled: logo DARK */
 .nav.scrolled .nav__logo-img--light { display: none; }
 .nav.scrolled .nav__logo-img--dark  { display: block; }
+
+/* ── FIX: evita que imágenes desborden en móvil ── */
+img { max-width: 100%; height: auto; }
