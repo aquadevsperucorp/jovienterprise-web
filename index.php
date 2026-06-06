@@ -18,7 +18,7 @@ include 'includes/header.php';
   <div class="container pres__inner">
 
     <!-- Texto izquierda -->
-    <div class="pres__content" data-aos="fade-right">
+    <div class="pres__content" data-aos="fade-right" data-aos-delay="100" data-aos-offset="0">
       <span class="pres__badge">
         <span class="pres__badge-dot" aria-hidden="true"></span>
         Grown &amp; Cultivated in Peru
@@ -49,17 +49,17 @@ include 'includes/header.php';
     </div>
 
     <!-- Visual derecha -->
-    <div class="pres__visual" data-aos="fade-left" data-aos-delay="100" aria-hidden="true">
+    <div class="pres__visual" data-aos="fade-left" data-aos-delay="200" data-aos-offset="0" aria-hidden="true">
       <div class="pres__imgs-grid">
-        <div class="pres__img-card pres__img-card--a">
+        <div class="pres__img-card pres__img-card--a" data-aos="fade-up" data-aos-delay="150">
           <img src="assets/images/aguaymanto_3.jpg" alt="Peruvian Golden Berry" loading="lazy">
           <span class="img-label notranslate" translate="no" style="color:var(--golden-3)">🌟 Golden Berry</span>
         </div>
-        <div class="pres__img-card pres__img-card--b">
+        <div class="pres__img-card pres__img-card--b" data-aos="fade-up" data-aos-delay="250">
           <img src="assets/images/uva_2.jpg" alt="Peruvian Grape" loading="lazy">
           <span class="img-label notranslate" translate="no" style="color:var(--grape-3)">🍇 Grape</span>
         </div>
-        <div class="pres__img-card pres__img-card--c">
+        <div class="pres__img-card pres__img-card--c" data-aos="fade-up" data-aos-delay="350">
           <img src="assets/images/vall_peru_1.jpg" alt="Peruvian Valley" loading="lazy">
           <span class="img-label">🇵🇪 Peru</span>
         </div>
@@ -92,7 +92,7 @@ include 'includes/header.php';
     <!-- Cards -->
     <div class="coming__cards" data-aos="fade-up" data-aos-delay="180">
       
-      <div class="coming-card coming-card--grape">
+      <div class="coming-card coming-card--grape" data-aos="fade-up" data-aos-delay="100">
         <div class="coming-card__img">
           <!-- <img src="assets/images/uva_2.jpg" alt="Grape – Peruvian Grape" loading="lazy"> -->
           <img src="assets/images/grape.png" alt="Grape – Peruvian Grape" loading="lazy">
@@ -106,7 +106,7 @@ include 'includes/header.php';
         </div>
       </div>
 
-      <div class="coming-card coming-card--golden">
+      <div class="coming-card coming-card--golden" data-aos="fade-up" data-aos-delay="200">
         <div class="coming-card__img">
           <!-- <img src="assets/images/aguaymanto_2.jpg" alt="Golden Berry" loading="lazy"> -->
           <img src="assets/images/golden-berry.png" alt="Golden Berry" loading="lazy">
@@ -120,7 +120,7 @@ include 'includes/header.php';
         </div>
       </div>
 
-      <div class="coming-card coming-card--combo">
+      <div class="coming-card coming-card--combo" data-aos="fade-up" data-aos-delay="300">
         <div class="coming-card__img" style="position:relative">
           <!-- <img src="assets/images/uva_3.jpg" alt="Grape & Golden Berry – Combined Formula" loading="lazy"> -->
           <img src="assets/images/grape-golden-berry.png" alt="Grape & Golden Berry – Combined Formula" loading="lazy">
