@@ -57,7 +57,7 @@ document.addEventListener('keydown', e => {
 //     Uncomment the line below and set your desired date.
 //     Example: new Date('2025-09-01T00:00:00')
 (function () {
-  const LAUNCH_DATE = '2026-07-28T00:00:00';
+  const LAUNCH_DATE = '2026-09-21T00:00:00';
   const launch = new Date(LAUNCH_DATE);
 
   const els = {

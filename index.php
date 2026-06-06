@@ -6,29 +6,40 @@ include 'includes/header.php';
 ?>
 
 <!-- ══════════════════════════ HERO ══════════════════════════════════════ -->
-<section class="hero" aria-label="Welcome">
+<section class="hero" aria-label="Hero background">
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__bg-img"></div>
     <div class="hero__bg-overlay"></div>
   </div>
+</section>
 
-  <div class="container hero__inner">
+<!-- ══════════════════════ PRESENTATION ══════════════════════════════════ -->
+<section class="pres" aria-label="About JOVI Enterprise">
+  <div class="container pres__inner">
 
-    <!-- Text -->
-    <div class="hero__content">
-      <span class="hero__badge">
-        <span class="hero__badge-dot" aria-hidden="true"></span>
+    <!-- Texto izquierda -->
+    <div class="pres__content" data-aos="fade-right">
+      <span class="pres__badge">
+        <span class="pres__badge-dot" aria-hidden="true"></span>
         Grown &amp; Cultivated in Peru
       </span>
-      <h1 class="hero__title">
+      <h1 class="pres__title">
         The power of<br>
         <em>Peruvian</em> nature<br>
         in every capsule
       </h1>
-      <p class="hero__desc">
+      <p class="pres__desc">
         JOVI Enterprise crafts 100% natural medicinal supplements made from Peruvian grape seeds and golden berry. No preservatives, no artificial ingredients, no compromises.
       </p>
-      <div class="hero__actions">
+
+      <!-- Trust pills -->
+      <div class="pres__pills">
+        <span class="pres__pill">🌿 100% Natural</span>
+        <span class="pres__pill">🚫 No Preservatives</span>
+        <span class="pres__pill">🇵🇪 Made in Peru</span>
+      </div>
+
+      <div class="pres__actions">
         <a href="pages/productos.php" class="btn btn--primary btn--lg">
           View Products
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -37,24 +48,24 @@ include 'includes/header.php';
       </div>
     </div>
 
-    <!-- Image grid -->
-    <div class="hero__visual" aria-hidden="true">
-      <div class="hero__imgs-grid">
-        <div class="hero__img-card hero__img-card--a">
-          <img src="assets/images/aguaymanto_3.jpg" alt="Peruvian Golden Berry" loading="eager">
+    <!-- Visual derecha -->
+    <div class="pres__visual" data-aos="fade-left" data-aos-delay="100" aria-hidden="true">
+      <div class="pres__imgs-grid">
+        <div class="pres__img-card pres__img-card--a">
+          <img src="assets/images/aguaymanto_3.jpg" alt="Peruvian Golden Berry" loading="lazy">
           <span class="img-label notranslate" translate="no" style="color:var(--golden-3)">🌟 Golden Berry</span>
         </div>
-        <div class="hero__img-card hero__img-card--b">
-          <img src="assets/images/uva_2.jpg" alt="Peruvian Grape" loading="eager">
+        <div class="pres__img-card pres__img-card--b">
+          <img src="assets/images/uva_2.jpg" alt="Peruvian Grape" loading="lazy">
           <span class="img-label notranslate" translate="no" style="color:var(--grape-3)">🍇 Grape</span>
         </div>
-        <div class="hero__img-card hero__img-card--c">
+        <div class="pres__img-card pres__img-card--c">
           <img src="assets/images/vall_peru_1.jpg" alt="Peruvian Valley" loading="lazy">
           <span class="img-label">🇵🇪 Peru</span>
         </div>
       </div>
-      <span class="hero__launch-badge">
-        <span class="hero__launch-dot" aria-hidden="true"></span>
+      <span class="pres__launch-badge">
+        <span class="pres__launch-dot" aria-hidden="true"></span>
         Launching Soon
       </span>
     </div>
@@ -80,20 +91,7 @@ include 'includes/header.php';
 
     <!-- Cards -->
     <div class="coming__cards" data-aos="fade-up" data-aos-delay="180">
-      <div class="coming-card coming-card--golden">
-        <div class="coming-card__img">
-          <!-- <img src="assets/images/aguaymanto_2.jpg" alt="Golden Berry" loading="lazy"> -->
-          <img src="assets/images/golden-berry.png" alt="Golden Berry" loading="lazy">
-          <div class="coming-card__img-overlay" style="background:linear-gradient(to top,rgba(122,77,0,.7),transparent 60%)"></div>
-        </div>
-        <div class="coming-card__body">
-          <div class="coming-card__emoji">🌟</div>
-          <div class="coming-card__name notranslate" translate="no">Golden Berry</div>
-          <span class="coming-card__mg">500 mg · 60 caps</span>
-          <span class="coming-card__soon">Coming Soon</span>
-        </div>
-      </div>
-
+      
       <div class="coming-card coming-card--grape">
         <div class="coming-card__img">
           <!-- <img src="assets/images/uva_2.jpg" alt="Grape – Peruvian Grape" loading="lazy"> -->
@@ -103,6 +101,20 @@ include 'includes/header.php';
         <div class="coming-card__body">
           <div class="coming-card__emoji">🍇</div>
           <div class="coming-card__name notranslate" translate="no">Grape</div>
+          <span class="coming-card__mg">500 mg · 60 caps</span>
+          <span class="coming-card__soon">Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="coming-card coming-card--golden">
+        <div class="coming-card__img">
+          <!-- <img src="assets/images/aguaymanto_2.jpg" alt="Golden Berry" loading="lazy"> -->
+          <img src="assets/images/golden-berry.png" alt="Golden Berry" loading="lazy">
+          <div class="coming-card__img-overlay" style="background:linear-gradient(to top,rgba(122,77,0,.7),transparent 60%)"></div>
+        </div>
+        <div class="coming-card__body">
+          <div class="coming-card__emoji">🌟</div>
+          <div class="coming-card__name notranslate" translate="no">Golden Berry</div>
           <span class="coming-card__mg">500 mg · 60 caps</span>
           <span class="coming-card__soon">Coming Soon</span>
         </div>
