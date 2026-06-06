@@ -631,6 +631,7 @@ h1, h2, h3, h4 {
   .nav__links, .nav__cta { display: none; }
   .nav__hamburger { display: flex; }
   .nav__logo { display: none; } /* oculta logo del nav en móvil, el menú móvil tiene el suyo */
+  .nav__hamburger.active { display: none; } /* oculta hamburger cuando el menú está abierto */
 }
 
 /* ── RESPONSIVE — MOBILE ── */
