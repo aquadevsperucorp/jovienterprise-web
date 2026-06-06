@@ -27,12 +27,9 @@ $base    = (strpos($_SERVER['PHP_SELF'], '/pages/') !== false) ? '../' : '';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
   <!-- CSS: variables → base → page-specific -->
-  <!-- <link rel="stylesheet" href="<?= $base ?>assets/css/variables.css">
-  <link rel="stylesheet" href="<?= $base ?>assets/css/base.css"> -->
   <link rel="stylesheet" href="<?= $base ?>assets/css/variables.css?v=<?= filemtime(__DIR__.'/../assets/css/variables.css') ?>">
   <link rel="stylesheet" href="<?= $base ?>assets/css/base.css?v=<?= filemtime(__DIR__.'/../assets/css/base.css') ?>">
   <?php if (!empty($extra_css)): ?>
-  <!-- <link rel="stylesheet" href="<?= $base ?>assets/css/<?= htmlspecialchars($extra_css) ?>"> -->
   <link rel="stylesheet" href="<?= $base ?>assets/css/<?= htmlspecialchars($extra_css) ?>?v=<?= filemtime(__DIR__.'/../assets/css/'.htmlspecialchars($extra_css)) ?>">
   <?php endif; ?>
 

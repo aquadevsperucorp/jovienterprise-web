@@ -94,7 +94,6 @@ include 'includes/header.php';
       
       <div class="coming-card coming-card--grape" data-aos="fade-up" data-aos-delay="100">
         <div class="coming-card__img">
-          <!-- <img src="assets/images/uva_2.jpg" alt="Grape – Peruvian Grape" loading="lazy"> -->
           <img src="assets/images/grape.png" alt="Grape – Peruvian Grape" loading="lazy">
           <div class="coming-card__img-overlay" style="background:linear-gradient(to top,rgba(62,16,80,.7),transparent 60%)"></div>
         </div>
@@ -108,7 +107,6 @@ include 'includes/header.php';
 
       <div class="coming-card coming-card--golden" data-aos="fade-up" data-aos-delay="200">
         <div class="coming-card__img">
-          <!-- <img src="assets/images/aguaymanto_2.jpg" alt="Golden Berry" loading="lazy"> -->
           <img src="assets/images/golden-berry.png" alt="Golden Berry" loading="lazy">
           <div class="coming-card__img-overlay" style="background:linear-gradient(to top,rgba(122,77,0,.7),transparent 60%)"></div>
         </div>
@@ -122,7 +120,6 @@ include 'includes/header.php';
 
       <div class="coming-card coming-card--combo" data-aos="fade-up" data-aos-delay="300">
         <div class="coming-card__img" style="position:relative">
-          <!-- <img src="assets/images/uva_3.jpg" alt="Grape & Golden Berry – Combined Formula" loading="lazy"> -->
           <img src="assets/images/grape-golden-berry.png" alt="Grape & Golden Berry – Combined Formula" loading="lazy">
           <div class="coming-card__img-overlay" style="background:linear-gradient(to top,rgba(23,64,32,.7),transparent 60%)"></div>
           <div style="position:absolute;top:8px;right:8px;width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.6);box-shadow:0 2px 8px rgba(0,0,0,.3)" aria-hidden="true">
