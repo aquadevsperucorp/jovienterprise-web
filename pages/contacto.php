@@ -12,30 +12,30 @@ require __DIR__ . '/../libs/PHPMailer/src/Exception.php';
 $ENV = loadEnv(dirname(__DIR__) . '/../.env');
 //$ENV = loadEnv(__DIR__ . '/../.env');
 
-$page_title = 'Contacto – JOVI Enterprise';
-$page_desc  = 'Consulta sobre nuestros productos Golden Berry, Grape y Grape & Golden Berry. Notifícate para el lanzamiento.';
+$page_title = 'Contact – JOVI Enterprise';
+$page_desc  = 'Ask us about our Golden Berry, Grape and Grape & Golden Berry products. Sign up to be notified at launch.';
 $extra_css  = 'contacto.css';
 
-// Inicializar variables SIEMPRE (evita warnings)
+// Initialise variables (prevents warnings)
 $nombre = $email = $telefono = $producto = $mensaje = '';
 $form_sent  = false;
 $form_error = '';
 
 /* ==========================================================
-   SI VIENE DEL REDIRECT (GET) → MOSTRAR MENSAJE DE ÉXITO
+   IF COMING FROM REDIRECT (GET) → SHOW SUCCESS MESSAGE
 ========================================================== */
 if (isset($_GET['sent']) && $_GET['sent'] === '1') {
     $form_sent = true;
 
-    // Recuperar nombre guardado en sesión
+    // Retrieve name saved in session
     $nombre = $_SESSION['contact_nombre'] ?? '';
 
-    // Opcional: borrar para que no quede guardado indefinidamente
+    // Optional: clear so it doesn't persist indefinitely
     unset($_SESSION['contact_nombre']);
 }
 
 /* ==========================================================
-   PROCESAR FORMULARIO (POST)
+   PROCESS FORM (POST)
 ========================================================== */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -49,9 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       try {
           $mail = new PHPMailer(true);
 
-          // Configuración SMTP Gmail
+          // Gmail SMTP configuration
           $mail->isSMTP();
-          $mail->SMTPAuth   = true; 
+          $mail->SMTPAuth   = true;
           $mail->CharSet    = 'UTF-8';
           $mail->Host       = $ENV['SMTP_HOST'] ?? 'smtp.gmail.com';
           $mail->Username   = $ENV['SMTP_USER'] ?? '';
@@ -59,38 +59,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           $mail->Port       = (int)($ENV['SMTP_PORT'] ?? 465);
           $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
-          // Remitente y destinatario
+          // Sender and recipient
           $mail->setFrom($ENV['MAIL_FROM'], $ENV['MAIL_FROM_NAME']);
           $mail->addAddress($ENV['MAIL_TO']);
           $mail->addReplyTo($email, $nombre);
 
-          // Contenido del email
+          // Email content
           $mail->isHTML(true);
-          $mail->Subject = "Nueva solicitud de venta en JOVI ENTERPRISE WEB";
-          $mail->Body    = "<h2>Nuevo mensaje de contacto</h2>
-              <p><strong>Nombre:</strong> {$nombre}</p>
+          $mail->Subject = "New sales enquiry via JOVI ENTERPRISE website";
+          $mail->Body    = "<h2>New contact message</h2>
+              <p><strong>Name:</strong> {$nombre}</p>
               <p><strong>Email:</strong> {$email}</p>
-              <p><strong>Teléfono:</strong> {$telefono}</p>
-              <p><strong>Producto:</strong> {$producto}</p>
+              <p><strong>Phone:</strong> {$telefono}</p>
+              <p><strong>Product:</strong> {$producto}</p>
               <hr>
-              <p><strong>Mensaje:</strong></p>
+              <p><strong>Message:</strong></p>
               <p>{$mensaje}</p>
           ";
 
           $mail->send();
 
-          // Guardar nombre en sesión para mostrarlo después del redirect
+          // Save name in session to display after redirect
           $_SESSION['contact_nombre'] = $nombre;
 
-          // PRG → evitar reenvío con F5
+          // PRG → prevents re-submission on page refresh
           header("Location: " . $_SERVER['PHP_SELF'] . "?sent=1");
           exit;
 
       } catch (Exception $e) {
-          $form_error = "Error al enviar: " . $mail->ErrorInfo;
+          $form_error = "Error sending message: " . $mail->ErrorInfo;
       }
     } else {
-        $form_error = 'Por favor completa todos los campos requeridos.';
+        $form_error = 'Please fill in all required fields.';
     }
 }
 
@@ -98,33 +98,33 @@ include '../includes/header.php';
 ?>
 
 <!-- Page Hero -->
-<section class="page-hero" aria-label="Contacto">
+<section class="page-hero" aria-label="Contact">
   <div class="page-hero__bg" style="background-image:url('../assets/images/aguaymanto_2.jpg')"></div>
   <div class="page-hero__overlay"></div>
   <div class="container">
-    <span class="section-tag" data-aos="fade-up">Hablemos</span>
-    <h1 data-aos="fade-up" data-aos-delay="80">¿Tienes <span>preguntas?</span></h1>
-    <p data-aos="fade-up" data-aos-delay="140">Consulta sobre ingredientes, dosificación o el próximo lanzamiento. Respondemos rápido.</p>
+    <span class="section-tag" data-aos="fade-up">Get in Touch</span>
+    <h1 data-aos="fade-up" data-aos-delay="80">Have any <span>questions?</span></h1>
+    <p data-aos="fade-up" data-aos-delay="140">Ask us about ingredients, dosage, or the upcoming launch. We get back to you quickly.</p>
   </div>
 </section>
 
-<!-- ══════════════════════ CONTACTO ════════════════════════════════════ -->
+<!-- ══════════════════════ CONTACT ══════════════════════════════════════ -->
 <section class="contact-section section">
   <div class="container">
     <div class="contact-grid">
 
-      <!-- Información de contacto -->
+      <!-- Contact information -->
       <div class="contact-info" data-aos="fade-right">
         <div>
-          <h2>¿Listo para ser<br>de los primeros?</h2>
-          <p>Nuestros productos se lanzan próximamente. Escríbenos y te notificamos en cuanto estén disponibles.</p>
+          <h2>Ready to be<br>among the first?</h2>
+          <p>Our products are launching soon. Send us a message and we'll notify you as soon as they're available.</p>
         </div>
 
         <div class="cinfo-item">
           <div class="cinfo-item__icon">📍</div>
           <div>
-            <span class="cinfo-item__title">Ubicación</span>
-            <span class="cinfo-item__val">Ica, Perú</span>
+            <span class="cinfo-item__title">Location</span>
+            <span class="cinfo-item__val">Ica, Peru</span>
           </div>
         </div>
         <div class="cinfo-item">
@@ -144,14 +144,14 @@ include '../includes/header.php';
         <div class="cinfo-item">
           <div class="cinfo-item__icon">🚀</div>
           <div>
-            <span class="cinfo-item__title">Lanzamiento</span>
-            <span class="cinfo-item__val">Próximamente — ¡no te lo pierdas!</span>
+            <span class="cinfo-item__title">Launch</span>
+            <span class="cinfo-item__val">Coming soon — don't miss it!</span>
           </div>
         </div>
 
-        <!-- Productos rápidos -->
+        <!-- Quick products -->
         <div class="contact-products">
-          <span class="contact-products__title">Productos disponibles pronto</span>
+          <span class="contact-products__title">Products coming soon</span>
           <div class="contact-products__list">
             <div class="contact-product-item contact-product-item--golden">
               <div class="contact-product-item__img">
@@ -179,7 +179,7 @@ include '../includes/header.php';
         </div>
       </div>
 
-      <!-- Formulario -->
+      <!-- Form -->
       <div data-aos="fade-left">
         <div class="contact-form-box">
 
@@ -187,15 +187,15 @@ include '../includes/header.php';
           <!-- ── SUCCESS ── -->
           <div class="form-success">
             <span class="form-success__icon">🌿</span>
-            <h3>¡Mensaje recibido!</h3>
-            <p>Gracias <?= htmlspecialchars($nombre) ?: 'por escribirnos' ?>. Te contactaremos pronto con información sobre nuestros productos.</p>
-            <a href="contacto.php" class="btn btn--outline btn--lg" style="margin-top:20px">Enviar otro mensaje</a>
+            <h3>Message received!</h3>
+            <p>Thank you <?= htmlspecialchars($nombre) ?: 'for reaching out' ?>. We'll be in touch soon with information about our products.</p>
+            <a href="contacto.php" class="btn btn--outline btn--lg" style="margin-top:20px">Send another message</a>
           </div>
 
           <?php else : ?>
           <!-- ── FORM ── -->
-          <h3>Envíanos un mensaje</h3>
-          <p>Te respondemos lo antes posible. Los campos con * son obligatorios.</p>
+          <h3>Send us a message</h3>
+          <p>We'll get back to you as soon as possible. Fields marked with * are required.</p>
 
           <?php if ($form_error) : ?>
           <div class="form-error-msg" role="alert">⚠️ <?= $form_error ?></div>
@@ -204,32 +204,32 @@ include '../includes/header.php';
           <form method="POST" id="contactForm" novalidate>
             <div class="form-grid">
               <div class="form-group">
-                <label class="form-label" for="nombre">Nombre *</label>
+                <label class="form-label" for="nombre">Name *</label>
                 <input type="text" id="nombre" name="nombre" class="form-control"
-                  placeholder="Tu nombre completo" required autocomplete="name"
+                  placeholder="Your full name" required autocomplete="name"
                   value="<?= htmlspecialchars($_POST['nombre'] ?? '') ?>">
               </div>
               <div class="form-group">
                 <label class="form-label" for="email">Email *</label>
                 <input type="email" id="email" name="email" class="form-control"
-                  placeholder="tu@email.com" required autocomplete="email"
+                  placeholder="you@email.com" required autocomplete="email"
                   value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
               </div>
             </div>
 
             <div class="form-grid">
               <div class="form-group">
-                <label class="form-label" for="telefono">Teléfono / WhatsApp</label>
+                <label class="form-label" for="telefono">Phone / WhatsApp</label>
                 <input type="tel" id="telefono" name="telefono" class="form-control"
                   placeholder="+51 908 653 582" autocomplete="tel"
                   value="<?= htmlspecialchars($_POST['telefono'] ?? '') ?>">
               </div>
               <div class="form-group">
-                <label class="form-label" for="producto">Producto de interés</label>
+                <label class="form-label" for="producto">Product of interest</label>
                 <select id="producto" name="producto" class="form-control">
-                  <option value="">Selecciona…</option>
+                  <option value="">Select…</option>
                   <?php
-                  $options = ['Golden Berry (500 mg)', 'Grape (500 mg)', 'Grape & Golden Berry (500 mg)', 'Todos los productos'];
+                  $options = ['Golden Berry (500 mg)', 'Grape (500 mg)', 'Grape & Golden Berry (500 mg)', 'All products'];
                   foreach ($options as $opt) :
                     $sel = (($_POST['producto'] ?? '') === $opt) ? 'selected' : '';
                   ?>
@@ -240,14 +240,14 @@ include '../includes/header.php';
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="mensaje">Mensaje *</label>
+              <label class="form-label" for="mensaje">Message *</label>
               <textarea id="mensaje" name="mensaje" class="form-control"
-                placeholder="Cuéntanos tu consulta, o pídenos que te notifiquemos cuando los productos estén disponibles…"
+                placeholder="Tell us your question, or ask us to notify you when products become available…"
                 required><?= htmlspecialchars($_POST['mensaje'] ?? '') ?></textarea>
             </div>
 
             <button type="submit" class="btn btn--primary btn--lg btn--full">
-              <span>Enviar mensaje</span>
+              <span>Send Message</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
                 <line x1="22" y1="2" x2="11" y2="13"/>
                 <polygon points="22 2 15 22 11 13 2 9 22 2"/>
