@@ -5,7 +5,7 @@
 
 /* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; font-size: 16px; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; font-size: 16px; overflow-x: hidden; }
 body {
   font-family: var(--font-b);
   background: var(--bg);
@@ -630,6 +630,8 @@ h1, h2, h3, h4 {
   .footer__grid { grid-template-columns: 1fr 1fr; row-gap: 36px; }
   .nav__links, .nav__cta { display: none; }
   .nav__hamburger { display: flex; }
+  .nav__logo { display: none; } /* oculta logo del nav en móvil, el menú móvil tiene el suyo */
+  .nav__hamburger.active { display: none; } /* oculta hamburger cuando el menú está abierto */
 }
 
 /* ── RESPONSIVE — MOBILE ── */
@@ -710,3 +712,6 @@ h1, h2, h3, h4 {
 /* Scrolled: logo DARK */
 .nav.scrolled .nav__logo-img--light { display: none; }
 .nav.scrolled .nav__logo-img--dark  { display: block; }
+
+/* ── FIX: evita que imágenes desborden en móvil ── */
+img { max-width: 100%; height: auto; }

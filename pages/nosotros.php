@@ -1,59 +1,59 @@
 <?php
-$page_title = 'Nosotros – JOVI Enterprise';
-$page_desc  = 'Conoce la historia y misión de JOVI Enterprise, empresa peruana de suplementos naturales a base de semillas de uva y aguaymanto.';
+$page_title = 'About Us – JOVI Enterprise';
+$page_desc  = 'Learn about the story and mission of JOVI Enterprise, a Peruvian company specialising in natural supplements made from grape seeds and golden berry.';
 $extra_css  = 'nosotros.css';
 include '../includes/header.php';
 ?>
 
 <!-- Page Hero -->
-<section class="page-hero" aria-label="Sobre nosotros">
+<section class="page-hero" aria-label="About us">
   <div class="page-hero__bg" style="background-image:url('../assets/images/vall_peru_1.jpg')"></div>
   <div class="page-hero__overlay"></div>
   <div class="container">
-    <span class="section-tag" data-aos="fade-up">Nuestra historia</span>
-    <h1 data-aos="fade-up" data-aos-delay="80">Somos <span>JOVI</span></h1>
-    <p data-aos="fade-up" data-aos-delay="140">Una empresa peruana apasionada por llevar lo mejor de la naturaleza a tu salud diaria.</p>
+    <span class="section-tag" data-aos="fade-up">Our Story</span>
+    <h1 data-aos="fade-up" data-aos-delay="80">We are <span>JOVI</span></h1>
+    <p data-aos="fade-up" data-aos-delay="140">A Peruvian company passionate about bringing the very best of nature to your everyday health.</p>
   </div>
 </section>
 
-<!-- ══════════════════════ QUIÉNES SOMOS ════════════════════════════════ -->
-<section class="section" style="background:var(--surface)" aria-label="Quiénes somos">
+<!-- ══════════════════════ WHO WE ARE ════════════════════════════════════ -->
+<section class="section" style="background:var(--surface)" aria-label="Who we are">
   <div class="container about-grid">
 
-    <!-- Mosaico de imágenes -->
+    <!-- Image mosaic -->
     <div class="about-imgs" data-aos="fade-right">
       <div class="about-imgs__main">
-        <img src="../assets/images/aguaymanto_1.jpg" alt="Aguaymanto peruano fresco" loading="lazy">
+        <img src="../assets/images/aguaymanto_1.jpg" alt="Fresh Peruvian golden berry" loading="lazy">
       </div>
       <div class="about-imgs__small">
-        <img src="../assets/images/uva_2.jpg" alt="Uva peruana en viñedo" loading="lazy">
+        <img src="../assets/images/uva_2.jpg" alt="Peruvian grapes in a vineyard" loading="lazy">
       </div>
       <div class="about-imgs__small">
-        <img src="../assets/images/valle_peru_2.jpg" alt="Valle fértil del Perú" loading="lazy">
+        <img src="../assets/images/valle_peru_2.jpg" alt="Fertile Peruvian valley" loading="lazy">
       </div>
     </div>
 
-    <!-- Texto -->
+    <!-- Text -->
     <div class="about-text" data-aos="fade-left">
-      <span class="section-tag">Quiénes somos</span>
+      <span class="section-tag">Who We Are</span>
       <h2>
-        La naturaleza peruana,<br>
-        <span style="color:var(--golden);font-style:italic">en su forma más pura</span>
+        Peruvian nature,<br>
+        <span style="color:var(--golden);font-style:italic">in its purest form</span>
       </h2>
       <p>
-        JOVI Enterprise nació con una misión clara: aprovechar el extraordinario potencial de las semillas peruanas para crear suplementos medicinales de la más alta calidad.
+        JOVI Enterprise was founded with a clear mission: to harness the extraordinary potential of Peruvian seeds and create medicinal supplements of the highest quality.
       </p>
       <p>
-        Trabajamos directamente con cultivadores peruanos para obtener semillas de uva y aguaymanto en su estado más puro, procesándolas bajo estándares internacionales de calidad.
+        We work directly with Peruvian growers to source grape seeds and golden berry in their purest state, processing them to international quality standards.
       </p>
       <p>
-        Nuestros productos no contienen conservantes, colorantes ni saborizantes artificiales. Cada cápsula es el resultado de un proceso cuidadoso que respeta la naturaleza y tu salud.
+        Our products contain no artificial preservatives, colours, or flavourings. Every capsule is the result of a careful process that respects both nature and your health.
       </p>
 
       <div class="about-stats">
         <div class="about-stat about-stat--golden">
           <span class="about-stat__val">3</span>
-          <span class="about-stat__label">Productos</span>
+          <span class="about-stat__label">Products</span>
         </div>
         <div class="about-stat about-stat--grape">
           <span class="about-stat__val">100%</span>
@@ -61,7 +61,7 @@ include '../includes/header.php';
         </div>
         <div class="about-stat about-stat--combo">
           <span class="about-stat__val">🇵🇪</span>
-          <span class="about-stat__label">Hecho en Perú</span>
+          <span class="about-stat__label">Made in Peru</span>
         </div>
       </div>
     </div>
@@ -69,20 +69,20 @@ include '../includes/header.php';
   </div>
 </section>
 
-<!-- ══════════════════════ VALORES ══════════════════════════════════════ -->
-<section class="section" style="background:var(--bg-2)" aria-label="Nuestros valores">
+<!-- ══════════════════════ VALUES ════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg-2)" aria-label="Our values">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
-      <span class="section-tag">Nuestros valores</span>
-      <h2 class="section-title">Lo que nos <span>define</span></h2>
+      <span class="section-tag">Our Values</span>
+      <h2 class="section-title">What <span>defines us</span></h2>
     </div>
     <div class="benefits__grid">
       <?php
       $vals = [
-        ['🌱', 'Origen natural',     'Todo comienza en la tierra. Seleccionamos las mejores semillas peruanas para garantizar la más alta pureza en cada cápsula.'],
-        ['🔬', 'Calidad científica', 'Extractos al 100% obtenidos mediante procesos científicos que maximizan los principios activos de cada semilla.'],
-        ['🤝', 'Compromiso real',    'Nos comprometemos con la salud de nuestros clientes ofreciendo productos honestos, sin artificiales ni engaños.'],
-        ['🇵🇪', 'Orgullo peruano', 'Creemos en el poder de los superalimentos peruanos y queremos compartirlos con el mundo desde Ica, Perú.'],
+        ['🌱', 'Natural Origins',      'Everything starts with the land. We select the finest Peruvian seeds to guarantee the highest purity in every capsule.'],
+        ['🔬', 'Scientific Quality',   '100% extracts obtained through scientific processes that maximise the active compounds in each seed.'],
+        ['🤝', 'Genuine Commitment',   'We are committed to our customers\' health by offering honest products — free from artificial ingredients and shortcuts.'],
+        ['🇵🇪', 'Peruvian Pride',     'We believe in the power of Peruvian superfoods and want to share them with the world, straight from Ica, Peru.'],
       ];
       foreach ($vals as $i => [$ico, $tit, $desc]) : ?>
       <div class="benefit-card" data-aos="fade-up" data-aos-delay="<?= $i * 80 ?>">
@@ -95,9 +95,9 @@ include '../includes/header.php';
   </div>
 </section>
 
-<!-- ══════════════════════ PANORÁMICA ════════════════════════════════════ -->
-<div class="panoramic-quote" aria-label="Panorama del Perú">
-  <img src="../assets/images/valle_peru_2.jpg" class="panoramic-quote__img" alt="Paisaje de los valles del Perú">
+<!-- ══════════════════════ PANORAMIC ═════════════════════════════════════ -->
+<div class="panoramic-quote" aria-label="Peruvian landscape">
+  <img src="../assets/images/valle_peru_2.jpg" class="panoramic-quote__img" alt="Peruvian valley landscape">
   <div class="panoramic-quote__overlay" aria-hidden="true"></div>
   <div class="panoramic-quote__text">
     <blockquote>"Grown &amp; Cultivated in Peru 🇵🇪"</blockquote>
