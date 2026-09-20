@@ -32,6 +32,8 @@ $base    = (strpos($_SERVER['PHP_SELF'], '/pages/') !== false) ? '../' : '';
   <?php if (!empty($extra_css)): ?>
   <link rel="stylesheet" href="<?= $base ?>assets/css/<?= htmlspecialchars($extra_css) ?>?v=<?= filemtime(__DIR__.'/../assets/css/'.htmlspecialchars($extra_css)) ?>">
   <?php endif; ?>
+  
+  <link rel="stylesheet" href="<?= $base ?>assets/css/nutri-modal.css?v=<?= filemtime(__DIR__.'/../assets/css/nutri-modal.css') ?>">
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">

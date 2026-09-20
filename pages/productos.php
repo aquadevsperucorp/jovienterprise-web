@@ -81,6 +81,10 @@ include '../includes/header.php';
       <a href="contacto.php" class="btn btn--primary btn--lg" style="margin-top:18px">
         Check Availability →
       </a>
+
+      <button type="button" class="nutri-trigger" data-modal-open="modalGolden">
+        🔬 View full nutritional profile
+      </button>
     </div>
   </div>
 </section>
@@ -124,6 +128,10 @@ include '../includes/header.php';
       <a href="contacto.php" class="btn btn--primary btn--lg" style="margin-top:18px;background:linear-gradient(135deg,var(--grape),var(--grape-2));box-shadow:0 4px 18px rgba(107,37,128,.32)">
         Check Availability →
       </a>
+
+      <button type="button" class="nutri-trigger" data-modal-open="modalGrape">
+        🔬 View full nutritional profile
+      </button>
     </div>
 
     <!-- Images -->
@@ -213,8 +221,176 @@ include '../includes/header.php';
       <a href="contacto.php" class="btn btn--primary btn--lg" style="margin-top:18px;background:linear-gradient(135deg,var(--combo),var(--combo-2));box-shadow:0 4px 18px rgba(42,112,53,.32)">
         Check Availability →
       </a>
+      
+      <button type="button" class="nutri-trigger" data-modal-open="modalCombo">
+        🔬 View full nutritional profile
+      </button>
     </div>
   </div>
 </section>
+
+<!-- ══════════════ MODAL: Golden Berry — Nutritional Profile ══════════════ -->
+<div class="nutri-modal" id="modalGolden" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="nutri-modal__overlay" data-modal-close></div>
+  <div class="nutri-modal__box">
+    <button type="button" class="nutri-modal__close" data-modal-close aria-label="Close">✕</button>
+    <span class="nutri-modal__eyebrow">Golden Berry · Nutritional Profile</span>
+    <h3 class="nutri-modal__title">Vitamins &amp; Health Benefits</h3>
+
+    <div class="nutri-chips">
+      <span class="nutri-chip">🅰️ Vitamin A</span>
+      <span class="nutri-chip">🅲 Vitamin C</span>
+      <span class="nutri-chip">🅱️ B-Complex (B1, B2, B3, B12)</span>
+    </div>
+
+    <ul class="nutri-list">
+      <li><span class="nutri-list__bullet">•</span><span><strong>Vitamin A:</strong> High in beta-carotene, which is essential for vision, immune function, and skin health.</span></li>
+      <li><span class="nutri-list__bullet">•</span><span><strong>Vitamin C:</strong> An excellent source of this antioxidant, which supports collagen production, immune system strength, and iron absorption.</span></li>
+      <li><span class="nutri-list__bullet">•</span><span><strong>B-Complex Vitamins:</strong> They contain significant amounts of Vitamin B1 (thiamine), B2 (riboflavin), B3 (niacin), and B12, which are vital for energy metabolism and neurological health.</span></li>
+      <li><span class="nutri-list__bullet">•</span><span><strong>High Antioxidant Capacity:</strong> They are rich in polyphenols and carotenoids, which help fight oxidative stress and may lower the risk of chronic diseases.</span></li>
+      <li><span class="nutri-list__bullet">•</span><span><strong>Anti-inflammatory Properties:</strong> Compounds within the fruit, such as withanolides, have been studied for their potential to reduce inflammation in the body.</span></li>
+      <li><span class="nutri-list__bullet">•</span><span><strong>Bone Health:</strong> They are a good source of Vitamin K, which is necessary for bone mineralization and blood clotting.</span></li>
+    </ul>
+
+    <div class="nutri-accordion">
+      <div class="nutri-accordion__item">
+        <button type="button" class="nutri-accordion__toggle" aria-expanded="false">
+          <span>How do these antioxidants work in your body? Learn more</span>
+          <span class="nutri-accordion__icon">+</span>
+        </button>
+        <div class="nutri-accordion__panel">
+          <p>The antioxidant properties of golden berries are primarily attributed to their high concentration of bioactive compounds, which work together to protect cells from oxidative damage.</p>
+          <p><strong>Key Antioxidant Compounds</strong></p>
+          <p><strong>Polyphenols:</strong> Golden berries are rich in various phenolic compounds. These act as "free radical scavengers," meaning they neutralize unstable molecules that cause cellular damage and contribute to aging and chronic diseases.</p>
+          <p><strong>Carotenoids:</strong> These are pigments that give the fruit its deep yellow-orange color. The most prominent is beta-carotene, which the body converts into Vitamin A. Beyond its role as a vitamin, it acts as a potent antioxidant that protects cell membranes and supports immune function.</p>
+          <p><strong>Withanolides:</strong> These are a group of naturally occurring steroids found in the Solanaceae (nightshade) family. They are considered the "signature" bioactive compounds of golden berries. They are widely studied for their ability to modulate the body's inflammatory response and provide significant protection against oxidative stress.</p>
+          <p><strong>How These Properties Benefit the Body</strong></p>
+          <p><strong>Neutralizing Oxidative Stress:</strong> By stabilizing free radicals, these antioxidants prevent the "chain reaction" of damage that can lead to cell mutation, DNA damage, and the development of chronic conditions like heart disease or certain cancers.</p>
+          <p><strong>Anti-Inflammatory Synergy:</strong> The combination of withanolides and polyphenols helps inhibit pro-inflammatory enzymes. By lowering chronic, low-grade inflammation, these compounds help protect tissues and organs throughout the body.</p>
+          <p><strong>Cellular Protection:</strong> The antioxidants in golden berries help maintain the integrity of cell walls, which is crucial for overall cellular health and longevity. This is particularly beneficial for high-stress areas, such as the eyes (where carotenoids help filter harmful light) and the skin.</p>
+          <p><strong>Enhanced Immune Response:</strong> By reducing the "oxidative burden" on the immune system, the antioxidants allow the body to respond more effectively to pathogens and external stressors.</p>
+          <p>In essence, the antioxidant profile of golden berries is not just about a single nutrient, but rather a synergistic blend of compounds that help the body maintain balance, reduce inflammation, and defend against the daily wear and tear of oxidative stress.</p>
+          <a class="nutri-accordion__link" data-modal-open="modalPolifenoles" data-modal-switch>→ Learn more about polyphenols</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ MODAL: Grape — Nutritional Profile ══════════════ -->
+<div class="nutri-modal" id="modalGrape" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="nutri-modal__overlay" data-modal-close></div>
+  <div class="nutri-modal__box">
+    <button type="button" class="nutri-modal__close" data-modal-close aria-label="Close">✕</button>
+    <span class="nutri-modal__eyebrow">Grape · Nutritional Profile</span>
+    <h3 class="nutri-modal__title">Nutrients &amp; Health Benefits</h3>
+
+    <div class="nutri-chips">
+      <span class="nutri-chip">🅴 Vitamin E</span>
+      <span class="nutri-chip">🍇 Proanthocyanidins</span>
+    </div>
+
+    <ul class="nutri-list">
+      <li><span class="nutri-list__bullet">•</span><span><strong>Vitamin E:</strong> Grape seeds are a notable source of Vitamin E, which acts as a powerful antioxidant protecting cells from damage.</span></li>
+      <li><span class="nutri-list__bullet">•</span><span><strong>Proanthocyanidins:</strong> While not a vitamin, this is the primary active component—a class of flavonoids that provide the majority of the health benefits associated with grape seeds.</span></li>
+      <li><span class="nutri-list__bullet">•</span><span><strong>Cardiovascular Support:</strong> Grape seed extract is widely recognized for its ability to help improve blood flow and maintain healthy blood pressure levels.</span></li>
+      <li><span class="nutri-list__bullet">•</span><span><strong>Powerful Antioxidant Protection:</strong> The proanthocyanidins are significantly more potent than vitamins C and E alone in neutralizing free radicals, which helps support overall cellular health.</span></li>
+      <li><span class="nutri-list__bullet">•</span><span><strong>Skin Health:</strong> Due to its high antioxidant content, grape seed extract is often used to support skin elasticity and protect against UV-induced damage.</span></li>
+    </ul>
+
+    <div class="nutri-accordion">
+      <div class="nutri-accordion__item">
+        <button type="button" class="nutri-accordion__toggle" aria-expanded="false">
+          <span>Proanthocyanidins are a type of polyphenol — see how they work</span>
+          <span class="nutri-accordion__icon">+</span>
+        </button>
+        <div class="nutri-accordion__panel">
+          <p>Proanthocyanidins belong to the broader family of polyphenols, the plant compounds responsible for most of grape seed extract's health benefits.</p>
+          <a class="nutri-accordion__link" data-modal-open="modalPolifenoles" data-modal-switch>→ Learn more about polyphenols</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nutri-disclaimer">
+      <span class="nutri-disclaimer__icon">⚠️</span>
+      <span><strong>Disclaimer:</strong> While these foods offer health benefits, they should be part of a balanced diet. If you are considering taking concentrated grape seed extract supplements, it is advisable to consult with a healthcare professional, especially if you are taking blood-thinning medications or have upcoming surgery, as they can affect blood clotting.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ MODAL: Polyphenols — Shared Science ══════════════ -->
+<div class="nutri-modal" id="modalPolifenoles" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="nutri-modal__overlay" data-modal-close></div>
+  <div class="nutri-modal__box">
+    <button type="button" class="nutri-modal__close" data-modal-close aria-label="Close">✕</button>
+    <span class="nutri-modal__eyebrow">The Science Behind It</span>
+    <h3 class="nutri-modal__title">Polyphenols</h3>
+
+    <div class="nutri-chips">
+      <span class="nutri-chip">🛡️ Antioxidant defense</span>
+      <span class="nutri-chip">❤️ Cardiovascular</span>
+      <span class="nutri-chip">🩸 Metabolic</span>
+      <span class="nutri-chip">🦠 Gut microbiome</span>
+      <span class="nutri-chip">🧠 Neuroprotection</span>
+    </div>
+
+    <p style="font-family:var(--font-b);font-size:.85rem;line-height:1.75;color:var(--text-2);margin-bottom:16px">
+      Polyphenols are naturally occurring plant compounds that function as powerful health-promoting agents. While they are best known for their antioxidant activity, their contribution to health is multifaceted and extends throughout several body systems.
+    </p>
+
+    <div class="nutri-accordion">
+      <div class="nutri-accordion__item">
+        <button type="button" class="nutri-accordion__toggle" aria-expanded="false">
+          <span>Primary Mechanisms</span>
+          <span class="nutri-accordion__icon">+</span>
+        </button>
+        <div class="nutri-accordion__panel">
+          <p><strong>Antioxidant Defense:</strong> Polyphenols neutralize free radicals—unstable molecules produced by normal metabolism and environmental stressors. By stabilizing these molecules, they prevent oxidative damage to DNA, proteins, and lipids, which is a major driver of aging and chronic disease.</p>
+          <p><strong>Anti-Inflammatory Action:</strong> They modulate signaling pathways that trigger inflammation. By suppressing pro-inflammatory cytokines and enzymes, they help reduce chronic, low-grade inflammation, which is linked to almost all major lifestyle-related diseases.</p>
+        </div>
+      </div>
+      <div class="nutri-accordion__item">
+        <button type="button" class="nutri-accordion__toggle" aria-expanded="false">
+          <span>Key Health Benefits</span>
+          <span class="nutri-accordion__icon">+</span>
+        </button>
+        <div class="nutri-accordion__panel">
+          <p><strong>Cardiovascular Health:</strong> Polyphenols are widely studied for their ability to improve endothelial function (the health of the lining of your blood vessels). They help maintain healthy blood pressure, prevent the oxidation of LDL cholesterol (which prevents plaque buildup), and improve overall blood flow.</p>
+          <p><strong>Metabolic Regulation:</strong> They play a significant role in managing blood sugar. Polyphenols can inhibit enzymes involved in carbohydrate digestion and absorption, and they help improve insulin sensitivity, making them beneficial for metabolic health and the prevention of type 2 diabetes.</p>
+          <p><strong>Gut Microbiome Support:</strong> Many polyphenols are not fully absorbed in the small intestine and instead reach the colon, where they act as "prebiotics." They feed beneficial gut bacteria, promoting a diverse and healthy microbiome, which in turn supports immune function and mood regulation.</p>
+          <p><strong>Neuroprotection:</strong> Emerging research suggests that certain polyphenols can cross the blood-brain barrier. They are thought to help protect neurons from oxidative stress and may support cognitive function and memory by reducing inflammation in the brain.</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-family:var(--font-b);font-size:.85rem;line-height:1.75;color:var(--text-2);margin-top:16px">
+      In summary, polyphenols act as a protective layer for your body, supporting the cardiovascular system, stabilizing metabolic processes, nurturing your gut bacteria, and providing defense against the cellular damage that leads to long-term health decline.
+    </p>
+  </div>
+</div>
+
+<!-- ══════════════ MODAL: Combo — Nutritional Profile ══════════════ -->
+<div class="nutri-modal" id="modalCombo" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="nutri-modal__overlay" data-modal-close></div>
+  <div class="nutri-modal__box">
+    <button type="button" class="nutri-modal__close" data-modal-close aria-label="Close">✕</button>
+    <span class="nutri-modal__eyebrow">Grape &amp; Golden Berry · Nutritional Profile</span>
+    <h3 class="nutri-modal__title">The Best of Both Extracts</h3>
+
+    <p style="font-family:var(--font-b);font-size:.85rem;line-height:1.75;color:var(--text-2);margin-bottom:16px">
+      This formula combines golden berry's vitamin-rich antioxidant profile (Vitamin A, C and B-Complex) with grape seed's concentrated proanthocyanidins and Vitamin E — delivering cardiovascular, anti-inflammatory and cellular protection benefits from both sources in a single capsule.
+    </p>
+
+    <div class="nutri-chips">
+      <button type="button" class="nutri-chip" style="cursor:pointer;border:none" data-modal-open="modalGolden" data-modal-switch>🌟 Golden Berry profile →</button>
+      <button type="button" class="nutri-chip" style="cursor:pointer;border:none" data-modal-open="modalGrape" data-modal-switch>🍇 Grape profile →</button>
+    </div>
+
+    <div class="nutri-disclaimer">
+      <span class="nutri-disclaimer__icon">⚠️</span>
+      <span><strong>Disclaimer:</strong> While these foods offer health benefits, they should be part of a balanced diet. If you are considering taking concentrated grape seed extract supplements, it is advisable to consult with a healthcare professional, especially if you are taking blood-thinning medications or have upcoming surgery, as they can affect blood clotting.</span>
+    </div>
+  </div>
+</div>
 
 <?php include '../includes/footer.php'; ?>
