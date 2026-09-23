@@ -55,10 +55,11 @@ $base    = (strpos($_SERVER['PHP_SELF'], '/pages/') !== false) ? '../' : '';
     </a>
 
     <ul class="nav__links" role="list">
-      <li><a href="<?= $base ?>index.php"           class="nav__link <?= $current === 'index'    ? 'nav__link--active' : '' ?>">Home</a></li>
-      <li><a href="<?= $base ?>pages/productos.php" class="nav__link <?= $current === 'productos' ? 'nav__link--active' : '' ?>">Products</a></li>
-      <li><a href="<?= $base ?>pages/nosotros.php"  class="nav__link <?= $current === 'nosotros'  ? 'nav__link--active' : '' ?>">About Us</a></li>
-      <li><a href="<?= $base ?>pages/contacto.php"  class="nav__link <?= $current === 'contacto'  ? 'nav__link--active' : '' ?>">Contact</a></li>
+      <li><a href="<?= $base ?>index.php"                     class="nav__link <?= $current === 'index' ? 'nav__link--active' : '' ?>">Home</a></li>
+      <li><a href="<?= $base ?>pages/productos.php"           class="nav__link <?= $current === 'productos' ? 'nav__link--active' : '' ?>">Products</a></li>
+      <li><a href="<?= $base ?>pages/perfil-nutricional.php"  class="nav__link <?= $current === 'perfil-nutricional' ? 'nav__link--active' : '' ?>">Nutritional Profile</a></li>
+      <li><a href="<?= $base ?>pages/nosotros.php"            class="nav__link <?= $current === 'nosotros' ? 'nav__link--active' : '' ?>">About Us</a></li>
+      <li><a href="<?= $base ?>pages/contacto.php"            class="nav__link <?= $current === 'contacto' ? 'nav__link--active' : '' ?>">Contact</a></li>
     </ul>
 
     <a href="<?= $base ?>pages/contacto.php" class="btn btn--primary btn--sm nav__cta" aria-label="Get in touch">
@@ -89,6 +90,9 @@ $base    = (strpos($_SERVER['PHP_SELF'], '/pages/') !== false) ? '../' : '';
     </a>
     <a href="<?= $base ?>pages/productos.php" class="nav-mobile-link">
       <span class="nav-icon" aria-hidden="true">🌟</span>Products
+    </a>
+    <a href="<?= $base ?>pages/perfil-nutricional.php" class="nav-mobile-link">
+      <span class="nav-icon" aria-hidden="true">🔬</span>Nutritional Profile
     </a>
     <a href="<?= $base ?>pages/nosotros.php"  class="nav-mobile-link">
       <span class="nav-icon" aria-hidden="true">🌿</span>About Us

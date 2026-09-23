@@ -99,7 +99,7 @@ include '../includes/header.php';
 
 <!-- Page Hero -->
 <section class="page-hero" aria-label="Contact">
-  <div class="page-hero__bg" style="background-image:url('../assets/images/aguaymanto_2.jpg')"></div>
+  <div class="page-hero__bg" style="background-image:url('../assets/images/contact/valle_peru_contact.jpg')"></div>
   <div class="page-hero__overlay"></div>
   <div class="container">
     <span class="section-tag" data-aos="fade-up">Get in Touch</span>

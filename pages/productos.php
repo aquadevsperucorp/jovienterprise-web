@@ -7,7 +7,7 @@ include '../includes/header.php';
 
 <!-- Page Hero -->
 <section class="page-hero" aria-label="Product catalogue">
-  <div class="page-hero__bg" style="background-image:url('../assets/images/valle_peru_2.jpg')"></div>
+  <div class="page-hero__bg" style="background-image:url('../assets/images/products/valle_peru_products.jpg')"></div>
   <div class="page-hero__overlay"></div>
   <div class="container">
     <span class="section-tag" data-aos="fade-up">Full Catalogue</span>

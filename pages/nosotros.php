@@ -7,7 +7,7 @@ include '../includes/header.php';
 
 <!-- Page Hero -->
 <section class="page-hero" aria-label="About us">
-  <div class="page-hero__bg" style="background-image:url('../assets/images/vall_peru_1.jpg')"></div>
+  <div class="page-hero__bg" style="background-image:url('../assets/images/about-us/valle_peru_about_us.jpg')"></div>
   <div class="page-hero__overlay"></div>
   <div class="container">
     <span class="section-tag" data-aos="fade-up">Our Story</span>
@@ -97,7 +97,7 @@ include '../includes/header.php';
 
 <!-- ══════════════════════ PANORAMIC ═════════════════════════════════════ -->
 <div class="panoramic-quote" aria-label="Peruvian landscape">
-  <img src="../assets/images/valle_peru_2.jpg" class="panoramic-quote__img" alt="Peruvian valley landscape">
+  <img src="../assets/images/about-us/valle_peru_cultivated.jpg" class="panoramic-quote__img" alt="Peruvian valley landscape">
   <div class="panoramic-quote__overlay" aria-hidden="true"></div>
   <div class="panoramic-quote__text">
     <blockquote>"Grown &amp; Cultivated in Peru 🇵🇪"</blockquote>
